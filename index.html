@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Коммерческое предложение · Стройкомфорт Стил · Devenas</title>
+<meta name="description" content="Логотип, фирменный стиль и брендбук для «Стройкомфорт Стил» — коммерческое предложение веб- и бренд-дизайнера Анастасии Девентейчик (DEVENAS).">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;900&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23D4FF3A'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial' font-weight='900' font-size='20' text-anchor='middle' fill='%230A0A0A'%3ED%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0E0E10;--surface:#17171A;--ink:#F4F1EA;--line:rgba(244,241,234,.18);
+  --muted:rgba(244,241,234,.62);--blue:#3D5AFE;--tomato:#FF4A1C;--lime:#D4FF3A;--dark:#0A0A0A;--white:#fff;
+  --graphite:#2F3234;--steel:#7D8185;--paper:#F2F0EB;--copper:#A35A38;
+  --pad:32px;
+  --display:'Unbounded',system-ui,sans-serif;--text:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.5;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.02em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.mark{background:var(--lime);color:var(--dark);padding:2px 14px 8px;display:inline-block;line-height:1}
+.mark.blue{background:var(--blue);color:var(--white)}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:clamp(30px,5vw,72px)}
+h3{font-size:clamp(20px,2vw,28px);letter-spacing:-.02em}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.logo{font-family:var(--display);font-weight:700;font-size:22px;text-decoration:none;letter-spacing:-.02em}
+nav{display:flex;gap:24px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.02em;
+  text-decoration:none;padding:16px 22px;background:var(--tomato);color:var(--dark);box-shadow:6px 6px 0 var(--lime);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--lime)}
+.btn.small{padding:10px 14px;font-size:12px;box-shadow:4px 4px 0 var(--lime)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(244,241,234,.5);box-shadow:none}
+.btn.ghost:hover{border-color:var(--lime);color:var(--lime);transform:none}
+
+/* section head */
+.shead{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shead .mono:first-child{color:var(--lime)}
+section{padding:0 0 120px}
+.stitle{padding:56px 0 48px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.stitle p{color:var(--muted);font-size:19px;max-width:560px}
+
+/* hero */
+.hero{padding:64px 0 0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 32px;margin-bottom:40px}
+.hero h1{font-size:clamp(38px,7.2vw,112px);letter-spacing:-.045em;line-height:.98;max-width:1250px}
+.hero h1 .mark{padding:0 16px 10px;margin-top:8px}
+.hero-sub{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:48px;align-items:end}
+.hero-sub p{font-size:clamp(18px,1.6vw,22px);max-width:620px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:20px;justify-content:flex-end}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--line)}
+.fact{padding:28px 24px 32px 0;border-right:1px solid var(--line)}
+.fact+.fact{padding-left:24px}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(30px,3.6vw,56px);letter-spacing:-.04em;line-height:1;margin-bottom:12px}
+.sticker{position:absolute;right:48px;top:40px;background:var(--ink);color:var(--dark);padding:14px 18px;transform:rotate(6deg);box-shadow:6px 6px 0 var(--tomato);font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;max-width:220px;line-height:1.35}
+
+/* marquee */
+.ribbon-wrap{overflow:hidden;padding:60px 0;margin:36px 0 60px}
+.ribbon{background:var(--tomato);color:var(--dark);transform:rotate(-2.5deg);margin:0 -40px;overflow:hidden;border-top:1px solid var(--dark);border-bottom:1px solid var(--dark)}
+.ribbon-track{display:flex;width:max-content;animation:run 38s linear infinite}
+.ribbon span{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,34px);text-transform:uppercase;white-space:nowrap;padding:16px 0}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ribbon-track{animation:none}html{scroll-behavior:auto}}
+
+/* grid cards */
+.grid{display:grid;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.grid>*{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card-idx{color:var(--muted);margin-bottom:28px;display:block}
+.card h3{margin-bottom:14px}
+.card p{color:var(--muted)}
+.quote{background:var(--ink);color:var(--dark);padding:48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:32px;box-shadow:8px 8px 0 var(--blue)}
+.quote b{font-family:var(--display);font-weight:900;font-size:clamp(28px,4vw,60px);letter-spacing:-.04em;line-height:1}
+.quote p{font-size:19px;max-width:620px}
+
+/* directions */
+.dir{display:flex;flex-direction:column;gap:20px}
+.dir .stage{background:var(--paper);aspect-ratio:16/10;display:grid;place-items:center}
+.dir .stage svg{width:42%}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.02em;border:1px solid var(--line);padding:4px 8px;margin-right:6px}
+.tag.lime{background:var(--lime);color:var(--dark);border-color:var(--lime)}
+.palette{display:grid;grid-template-columns:3fr 1.2fr 1fr 1fr .6fr;margin-top:32px;min-height:140px}
+.palette div{padding:16px;display:flex;flex-direction:column;justify-content:flex-end;font-family:var(--mono);font-size:11px;text-transform:uppercase}
+.lockup{display:flex;align-items:center;gap:22px;background:var(--graphite);padding:48px;margin-top:32px;justify-content:center;flex-wrap:wrap}
+.lockup .wm b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(26px,3.6vw,52px);letter-spacing:-.01em;line-height:1;color:#fff}
+.lockup .wm span{display:block;font-family:var(--display);font-weight:700;font-size:clamp(12px,1.2vw,17px);letter-spacing:.6em;color:#C9CBCC;margin-top:8px}
+
+/* steps */
+.steps{border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:90px 1.1fr 1.6fr 220px;gap:32px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start;transition:background .15s,color .15s}
+.step:hover{background:var(--lime);color:var(--dark)}
+.step:hover .muted,.step:hover .step-out{color:var(--dark)}
+.step-n{font-family:var(--mono);font-size:14px;padding-left:8px}
+.step h3{font-size:clamp(20px,2vw,30px)}
+.step ul{list-style:none;color:inherit}
+.step li{padding-left:18px;position:relative;margin-bottom:6px}
+.step li::before{content:"—";position:absolute;left:0}
+.step-out{font-family:var(--mono);font-size:12px;text-transform:uppercase;color:var(--lime);padding-right:8px}
+
+/* timeline */
+.tl{border:1px solid var(--line);margin-top:56px}
+.tl-weeks,.tl-row{display:grid;grid-template-columns:repeat(7,1fr)}
+.tl-weeks div{padding:12px 16px;border-right:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
+.tl-weeks div:last-child{border-right:0}
+.tl-row{border-top:1px solid var(--line);padding:14px 0}
+.tl-bar{margin:0 6px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);font-size:15px}
+.tl-bar b{display:block;font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em}
+.tl-bar.hot{background:var(--blue);border-color:var(--blue);color:#fff}
+.tl-gates{display:flex;flex-wrap:wrap;gap:12px 32px;padding:20px 16px;border-top:1px solid var(--line)}
+.tl-gates span::before{content:"◆ ";color:var(--lime)}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.price{border:1px solid var(--line);padding:36px 32px;display:flex;flex-direction:column;gap:24px;position:relative;background:var(--bg)}
+.price.pop{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:8px 8px 0 var(--lime)}
+.price.pop .muted{color:rgba(255,255,255,.75)}
+.price .flag{position:absolute;top:-14px;left:24px;background:var(--lime);color:var(--dark);padding:6px 10px;font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase}
+.price h3{font-size:26px}
+.amount{font-family:var(--display);font-weight:900;font-size:clamp(36px,3.6vw,54px);letter-spacing:-.04em;line-height:1}
+.amount small{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:0;display:block;margin-top:10px;text-transform:uppercase}
+.price ul{list-style:none;flex:1;border-top:1px solid currentColor;padding-top:20px;opacity:.95}
+.price li{padding:7px 0 7px 26px;position:relative;font-size:16px}
+.price li::before{content:"✓";position:absolute;left:0;font-family:var(--mono);font-weight:700}
+.price li.plus{font-weight:600}
+.price li.plus::before{content:"+"}
+.price .btn{align-self:flex-start}
+.price.pop .btn{background:var(--lime);box-shadow:6px 6px 0 var(--dark)}
+.addons{margin-top:56px;border-top:1px solid var(--line)}
+.addon{display:grid;grid-template-columns:1fr auto;gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.addon b{font-family:var(--mono);font-weight:500;white-space:nowrap}
+.note{margin-top:24px;color:var(--muted);font-size:15px;max-width:900px}
+
+/* deliverables */
+.deliv .card b{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--lime);margin-top:18px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.about>*{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px}
+.avatar{background:var(--lime);color:var(--dark);display:flex;flex-direction:column;justify-content:space-between;min-height:420px}
+.avatar .big{font-family:var(--display);font-weight:900;font-size:clamp(72px,10vw,160px);letter-spacing:-.06em;line-height:.8}
+.about-text h3{font-size:clamp(26px,3vw,44px);margin-bottom:24px}
+.about-text p{margin-bottom:16px;max-width:720px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:32px;border-top:1px solid var(--line)}
+.stats div{padding:20px 16px 0 0}
+.stats b{display:block;font-family:var(--display);font-weight:900;font-size:48px;letter-spacing:-.04em;line-height:1;margin-bottom:8px}
+.cases{margin-top:32px;border-top:1px solid var(--line)}
+.case{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* terms + faq */
+.terms .card h3{font-size:22px}
+.checklist{list-style:none;margin-top:8px}
+.checklist li{padding:10px 0 10px 32px;border-bottom:1px solid var(--line);position:relative}
+.checklist li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border:1px solid var(--lime)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;gap:24px;font-family:var(--display);font-weight:600;font-size:clamp(18px,1.8vw,24px);letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--lime);font-size:24px}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 26px;color:var(--muted);max-width:900px}
+
+/* cta */
+.cta{background:var(--blue);color:#fff;padding:72px 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.cta h2{font-size:clamp(34px,5.4vw,84px)}
+.cta p{font-size:19px;margin-top:20px;max-width:560px}
+.channels{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.4)}
+.channels a{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;font-family:var(--mono);text-transform:uppercase;font-size:14px}
+.channels a:hover{color:var(--lime)}
+footer{padding:48px 0 32px}
+footer .word{font-family:var(--display);font-weight:900;font-size:clamp(64px,16.5vw,236px);letter-spacing:-.05em;line-height:.8}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
+
+/* responsive */
+@media (max-width:1100px){
+  nav{display:none}
+  .stitle,.hero-sub,.cta{grid-template-columns:1fr}
+  .hero-actions{justify-content:flex-start}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .step{grid-template-columns:60px 1fr;gap:12px 20px}
+  .step>ul,.step-out{grid-column:2}
+  .prices{grid-template-columns:1fr;gap:40px}
+  .about{grid-template-columns:1fr}
+  .avatar{min-height:280px}
+  .sticker{display:none}
+}
+@media (max-width:760px){
+  :root{--pad:20px}
+  body{font-size:16px}
+  .hero h1{font-size:30px}
+  .hero h1 .mark{padding:0 10px 6px}
+  h2{font-size:28px}
+  .g3,.g4{grid-template-columns:1fr}
+  .grid>*{padding:24px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .fact,.fact+.fact{padding:20px 12px 20px 0;border-right:0}
+  .fact:nth-child(odd){border-right:1px solid var(--line)}
+  .fact:nth-child(even){padding-left:12px}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .quote{grid-template-columns:1fr;padding:28px;gap:16px}
+  .palette{grid-template-columns:repeat(5,1fr);min-height:110px}
+  .palette div{padding:8px;font-size:9px}
+  .lockup{padding:28px}
+  .tl-weeks{display:none}
+  .tl-row{grid-template-columns:1fr !important;padding:8px 0}
+  .tl-row .tl-bar{grid-column:1 !important;margin:4px 8px}
+  .about>*{padding:24px}
+  .stats b{font-size:34px}
+  .cta{padding:40px 24px}
+  .shead .mono:last-child{display:none}
+  section{padding-bottom:80px}
+  .ribbon-wrap{margin:24px 0 40px;padding:40px 0}
+  .price{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">DEVENAS®</a>
+    <nav class="mono">
+      <a href="#task">Задача</a><a href="#steps">Этапы</a><a href="#prices">Пакеты</a><a href="#result">Результат</a><a href="#about">Обо мне</a>
+    </nav>
+    <a class="btn small" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить ↗</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap" style="position:relative">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="sticker">Предложение подготовлено лично для «Стройкомфорт Стил»</div>
+    <div class="hero-meta mono">
+      <span style="color:var(--lime)">[КП] Коммерческое предложение</span>
+      <span class="muted">08.10.2026</span>
+      <span class="muted">Действует до 07.11.2026</span>
+    </div>
+    <h1>Бренд и айдентика для <span class="mark">Стройкомфорт Стил</span></h1>
+    <div class="hero-sub">
+      <p>Логотип, фирменный стиль и носители для производителя морских контейнеров — чтобы с первого взгляда было понятно: вы производитель с 2004 года, а не перекупщик и не продавец бытовок.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#prices">Выбрать пакет ↗</a>
+        <a class="btn ghost" href="#steps">Как будем работать</a>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>7</b><span class="mono muted">недель — от брифа до брендбука</span></div>
+      <div class="fact"><b>3</b><span class="mono muted">направления знака на выбор</span></div>
+      <div class="fact"><b>10</b><span class="mono muted">понятных этапов с утверждением</span></div>
+      <div class="fact"><b>100%</b><span class="mono muted">исключительных прав — вам</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ribbon-wrap"><div class="ribbon" aria-hidden="true"><div class="ribbon-track">
+  <span>Логотип ✺ Фирменный стиль ✺ Маркировка контейнеров ✺ Борта техники ✺ Документы ✺ Брендбук ✺&nbsp;</span>
+  <span>Логотип ✺ Фирменный стиль ✺ Маркировка контейнеров ✺ Борта техники ✺ Документы ✺ Брендбук ✺&nbsp;</span>
+</div></div></div>
+
+<div class="wrap">
+
+  <!-- 01 TASK -->
+  <section id="task">
+    <div class="shead"><span class="mono">[01] Задача</span><span class="mono muted">Как я понимаю ваш бизнес</span></div>
+    <div class="stitle">
+      <h2>Лицо бренда — <span class="mark">контейнер</span></h2>
+      <p>Я уже разобрала ваш бриф и собрала карту бренда. Проект стартует не с чистого листа, а с понятного направления — это экономит вам неделю работы и деньги.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><span class="card-idx mono">(01)</span><h3>Производитель, а не перекуп</h3><p>Свой производственный цикл с 2004 года, площадки в Москве и Санкт-Петербурге. Стиль должен показывать производство и контроль, а не «доску объявлений».</p></div>
+      <div class="card"><span class="card-idx mono">(02)</span><h3>Контейнер — герой, дом — верхняя полка</h3><p>Знак строим на образе контейнера. Дома под ключ показываем на сайте и в рекламе как доказательство: контейнер умеем довести до жилья.</p></div>
+      <div class="card"><span class="card-idx mono">(03)</span><h3>Стиль, который выдержит металл</h3><p>Знак в одну краску: на тёмном борту контейнеровоза, на торце контейнера и мелко в договоре. Без градиентов и тонких линий.</p></div>
+    </div>
+    <div class="quote">
+      <b>Сталь.<br>Срок.<br>Своё<br>производство.</b>
+      <p>Суть бренда в трёх словах. «Стил» в названии держит сталь и производство, «комфорт» объясняет, почему у поставщика контейнеров есть жилые модули. Графит, тёмная сталь и один тёплый акцент — медь, чтобы уйти и от портового синего, и от оранжевого строймаркета.</p>
+    </div>
+  </section>
+
+  <!-- 02 SKETCHES -->
+  <section id="sketches">
+    <div class="shead"><span class="mono">[02] Первые эскизы</span><span class="mono muted">Направление, а не финал</span></div>
+    <div class="stitle">
+      <h2>Уже есть <span class="mark blue">три идеи</span> знака</h2>
+      <p>Это рабочие наброски из карты бренда — чтобы вы видели, куда мы пойдём. На этапе логотипа каждое направление будет проработано, проверено на носителях и доведено до финала.</p>
+    </div>
+    <div class="grid g3">
+      <div class="dir">
+        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление A: торец контейнера"><path fill-rule="evenodd" fill="#2F3234" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg></div>
+        <div><span class="tag lime">Рекомендую</span><span class="tag">A · Торец</span></div>
+        <p class="muted">Двустворчатый торец с запорными штангами — самый узнаваемый «контейнерный» образ. Работает от 10 мм до борта.</p>
+      </div>
+      <div class="dir">
+        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление B: объём контейнера"><path fill="#2F3234" d="M0 40L40 0H200L160 40Z"/><path fill="#2F3234" d="M0 48H152V160H0Z"/><path fill="#2F3234" d="M160 48L200 8V120L160 160Z"/></svg></div>
+        <div><span class="tag">B · Объём</span></div>
+        <p class="muted">Характерный параллелепипед из трёх граней. Читается как модуль и склад одновременно.</p>
+      </div>
+      <div class="dir">
+        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление C: торец с тёплым проёмом"><path fill-rule="evenodd" fill="#2F3234" d="M0 0H200V160H0Z M112 28H172V88H112Z"/><path fill="#A35A38" d="M120 36H164V80H120Z"/></svg></div>
+        <div><span class="tag">C · Торец + проём</span></div>
+        <p class="muted">Торец с тёплым окном — мост к линейке домов. В одну краску окно становится вырезом.</p>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 200 160" width="96" aria-hidden="true"><path fill-rule="evenodd" fill="#fff" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg>
+      <div class="wm"><b>СТРОЙКОМФОРТ</b><span>СТИЛ</span></div>
+    </div>
+    <div class="palette" aria-label="Предварительная палитра">
+      <div style="background:var(--graphite);color:#fff">Графит<br>≈ RAL 7021</div>
+      <div style="background:#3F454A;color:#fff">Тёмная сталь<br>≈ RAL 7016</div>
+      <div style="background:var(--steel);color:#fff">Сталь<br>≈ RAL 7037</div>
+      <div style="background:var(--paper);color:var(--dark)">Бумага<br>≈ RAL 9002</div>
+      <div style="background:var(--copper);color:#fff">Медь<br>≈ RAL 8004</div>
+    </div>
+  </section>
+
+  <!-- 03 STEPS -->
+  <section id="steps">
+    <div class="shead"><span class="mono">[03] Как я работаю</span><span class="mono muted">10 этапов · каждый заканчивается утверждением</span></div>
+    <div class="stitle">
+      <h2>От брифа до брендбука — <span class="mark">10 шагов</span></h2>
+      <p>Вы всегда знаете, что происходит сейчас, что будет дальше и что вы получите на выходе этапа. Следующий шаг начинаю только после вашего «да».</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-n">(01)</span><h3>Знакомство и бриф</h3><ul><li>Созвон 1–1,5 часа с собственником</li><li>Короткое интервью с менеджером по продажам: что спрашивают клиенты, с кем сравнивают</li></ul><span class="step-out">→ Заполненный бриф</span></div>
+      <div class="step"><span class="step-n">(02)</span><h3>Договор и старт</h3><ul><li>Фиксируем пакет, сроки и стоимость</li><li>Работаю официально как самозанятая: договор и чеки</li><li>Предоплата 50%</li></ul><span class="step-out">→ Договор и график</span></div>
+      <div class="step"><span class="step-n">(03)</span><h3>Исследование</h3><ul><li>Анализ 8–10 конкурентов: перекупщики, продавцы бытовок, модульные дома</li><li>Две аудитории: покупатели и арендаторы контейнеров, заказчики домов</li></ul><span class="step-out">→ Карта конкурентов</span></div>
+      <div class="step"><span class="step-n">(04)</span><h3>Платформа бренда</h3><ul><li>Суть, позиционирование, аргументы «почему мы»</li><li>Характер и тон: как бренд говорит в объявлениях и КП</li></ul><span class="step-out">→ Карта бренда</span></div>
+      <div class="step"><span class="step-n">(05)</span><h3>Мудборд</h3><ul><li>Настроение, фактуры, цвет, шрифты, референсы</li><li>Сразу проверяем, как это выглядит на металле и на бумаге</li></ul><span class="step-out">→ Утверждённое настроение</span></div>
+      <div class="step"><span class="step-n">(06)</span><h3>Концепции знака</h3><ul><li>Три направления логотипа, каждое — на борту, торце контейнера и бланке</li><li>Вы выбираете одно для доработки</li></ul><span class="step-out">→ Выбранное направление</span></div>
+      <div class="step"><span class="step-n">(07)</span><h3>Доработка логотипа</h3><ul><li>Связка «Стройкомфорт» + «Стил»: пропорции, разрядка, выравнивание</li><li>Версии: горизонтальная, вертикальная, знак отдельно, в одну краску</li><li>Тест масштаба от 10 мм до нескольких метров</li></ul><span class="step-out">→ Утверждённый логотип</span></div>
+      <div class="step"><span class="step-n">(08)</span><h3>Фирменный стиль</h3><ul><li>Цвета с кодами RAL, CMYK, Pantone и RGB</li><li>Шрифты с кириллицей, графические элементы, стиль фото и иконок</li></ul><span class="step-out">→ Система стиля</span></div>
+      <div class="step"><span class="step-n">(09)</span><h3>Носители</h3><ul><li>Маркировка контейнера, борт контейнеровоза, документы, объявления — по составу пакета</li><li>Макеты с размерами, готовые для печати и покраски</li></ul><span class="step-out">→ Макеты для производства</span></div>
+      <div class="step"><span class="step-n">(10)</span><h3>Брендбук, передача и поддержка</h3><ul><li>Правила, понятные печатнику, маляру и веб-студии</li><li>Передача исходников и договор отчуждения прав</li><li>2 недели бесплатной поддержки: отвечаю подрядчикам, проверяю первые выпуски</li></ul><span class="step-out">→ Брендбук и все файлы</span></div>
+    </div>
+
+    <div class="tl" aria-label="График пакета «Фирменный стиль»">
+      <div class="tl-weeks"><div>Нед. 1</div><div>Нед. 2</div><div>Нед. 3</div><div>Нед. 4</div><div>Нед. 5</div><div>Нед. 6</div><div>Нед. 7</div></div>
+      <div class="tl-row"><div class="tl-bar" style="grid-column:1/3"><b>Бриф, исследование, платформа</b>этапы 01–04</div></div>
+      <div class="tl-row"><div class="tl-bar hot" style="grid-column:2/5"><b>Мудборд и логотип</b>этапы 05–07</div></div>
+      <div class="tl-row"><div class="tl-bar" style="grid-column:5/7"><b>Фирменный стиль и носители</b>этапы 08–09</div></div>
+      <div class="tl-row"><div class="tl-bar" style="grid-column:7/8"><b>Брендбук</b>этап 10</div></div>
+      <div class="tl-gates mono muted"><span>Конец нед. 2 — платформа утверждена</span><span>Конец нед. 4 — логотип утверждён</span><span>Нед. 7 — приёмка и передача прав</span></div>
+    </div>
+    <p class="note">График дан для пакета «Фирменный стиль». «Логотип» занимает 3 недели, «Бренд под ключ» — 10 недель.</p>
+  </section>
+
+  <!-- 04 PRICES -->
+  <section id="prices">
+    <div class="shead"><span class="mono">[04] Пакеты и цены</span><span class="mono muted">Цена фиксируется в договоре</span></div>
+    <div class="stitle">
+      <h2>Выберите формат — <span class="mark">остальное беру на себя</span></h2>
+      <p>Цены соответствуют среднему уровню рынка для бренд-дизайнеров и небольших студий в России. Сумма в договоре не меняется в ходе работы.</p>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <span class="mono muted">(A) Старт</span>
+        <h3>Логотип</h3>
+        <div class="amount">60 000 ₽<small class="muted">3 недели</small></div>
+        <ul>
+          <li>Бриф и анализ конкурентов</li>
+          <li>2 направления знака</li>
+          <li>Логотип: горизонтальная и вертикальная версии, знак отдельно</li>
+          <li>Цветная и одноцветная версии</li>
+          <li>Базовые цвета и шрифты</li>
+          <li>Визитка</li>
+          <li>Мини-гайд, 6–8 страниц</li>
+        </ul>
+        <a class="btn ghost" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить ↗</a>
+      </div>
+      <div class="price pop">
+        <span class="flag">Рекомендую для вас</span>
+        <span class="mono muted">(B) Оптимальный</span>
+        <h3>Фирменный стиль</h3>
+        <div class="amount">150 000 ₽<small class="muted">7 недель</small></div>
+        <ul>
+          <li class="plus">Всё из пакета «Логотип»</li>
+          <li>3 направления знака вместо 2</li>
+          <li>Платформа бренда: позиционирование, аргументы, тон</li>
+          <li>Цвета с кодами RAL, CMYK, Pantone, RGB</li>
+          <li>Графические элементы, стиль фото и иконок</li>
+          <li>Маркировка контейнера и борт контейнеровоза</li>
+          <li>Бланк, КП, договор</li>
+          <li>3 шаблона объявлений и соцсетей</li>
+          <li>Брендбук, около 30 страниц</li>
+        </ul>
+        <a class="btn" href="https://t.me/devenas" target="_blank" rel="noopener">Выбрать этот пакет ↗</a>
+      </div>
+      <div class="price">
+        <span class="mono muted">(C) Максимум</span>
+        <h3>Бренд под ключ</h3>
+        <div class="amount">240 000 ₽<small class="muted">10 недель</small></div>
+        <ul>
+          <li class="plus">Всё из пакета «Фирменный стиль»</li>
+          <li>Вывеска на площадку</li>
+          <li>Спецодежда</li>
+          <li>Рекламный щит</li>
+          <li>Табличка на готовый дом</li>
+          <li>6 шаблонов объявлений и соцсетей</li>
+          <li>Концепция главной страницы сайта</li>
+          <li>Брендбук, около 50 страниц</li>
+          <li>Месяц сопровождения подрядчиков</li>
+        </ul>
+        <a class="btn ghost" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить ↗</a>
+      </div>
+    </div>
+
+    <div class="addons">
+      <div class="addon"><span>Дополнительный носитель сверх пакета</span><b>от 5 000 ₽</b></div>
+      <div class="addon"><span>Раскладка брендирования машины, 3 стороны</span><b>от 20 000 ₽</b></div>
+      <div class="addon"><span>Дополнительный круг правок</span><b>7 000 ₽</b></div>
+      <div class="addon"><span>Одностраничный сайт в новом стиле</span><b>55 000 ₽</b></div>
+      <div class="addon"><span>Многостраничный сайт с каталогом контейнеров и домов</span><b>от 80 000 ₽</b></div>
+    </div>
+    <p class="note">Не входит в стоимость: печать и покраска, фото- и видеосъёмка, пошлины Роспатента за регистрацию товарного знака.</p>
+  </section>
+
+  <!-- 05 RESULT -->
+  <section id="result">
+    <div class="shead"><span class="mono">[05] Результат</span><span class="mono muted">Что останется у вас</span></div>
+    <div class="stitle">
+      <h2>Файлы, которые <span class="mark">можно сразу отдать</span> в работу</h2>
+      <p>Печатник, маляр, производитель вывесок или веб-студия получат всё, что нужно, без звонков дизайнеру.</p>
+    </div>
+    <div class="grid g4 deliv">
+      <div class="card"><span class="card-idx mono">(01)</span><h3>Логотип и знак</h3><p>Все версии: цветная, одноцветная, на тёмном и светлом фоне.</p><b>AI · PDF · SVG · PNG</b></div>
+      <div class="card"><span class="card-idx mono">(02)</span><h3>Трафарет</h3><p>Знак и маркировка для покраски контейнеров и бортов в натуральную величину.</p><b>DXF · PDF 1:1</b></div>
+      <div class="card"><span class="card-idx mono">(03)</span><h3>Макеты носителей</h3><p>С размерами и вылетами, готовые для типографии и производства.</p><b>PDF · исходники</b></div>
+      <div class="card"><span class="card-idx mono">(04)</span><h3>Шаблоны документов</h3><p>Бланк, КП и договор — офис заполняет сам, без дизайнера.</p><b>DOCX</b></div>
+      <div class="card"><span class="card-idx mono">(05)</span><h3>Шаблоны объявлений</h3><p>Для Авито и соцсетей: заменили фото и цену — и публикуете.</p><b>Figma</b></div>
+      <div class="card"><span class="card-idx mono">(06)</span><h3>Брендбук</h3><p>Правила стиля: что можно, что нельзя, примеры на всех носителях.</p><b>PDF · Figma</b></div>
+      <div class="card"><span class="card-idx mono">(07)</span><h3>Цвет и шрифты</h3><p>Палитра с кодами для краски и печати, ссылки на бесплатные шрифты.</p><b>RAL · CMYK · Pantone · ASE</b></div>
+      <div class="card"><span class="card-idx mono">(08)</span><h3>Права</h3><p>Исключительные права на логотип и стиль — основа для регистрации товарного знака.</p><b>Договор отчуждения</b></div>
+    </div>
+  </section>
+
+  <!-- 06 ABOUT -->
+  <section id="about">
+    <div class="shead"><span class="mono">[06] Обо мне</span><span class="mono muted">Кто будет делать ваш бренд</span></div>
+    <div class="about" style="margin-top:56px">
+      <div class="avatar">
+        <span class="mono">← Это я</span>
+        <div><div class="big">АД</div><p class="mono" style="margin-top:20px">Анастасия Девентейчик · DEVENAS</p></div>
+      </div>
+      <div class="about-text">
+        <h3>Дизайнер с экономическим мышлением</h3>
+        <p>Я Анастасия, веб- и бренд-дизайнер. По образованию — экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него.</p>
+        <p class="muted">Работаю официально как самозанятая: договор и чеки. Tilda Expert. Веду проект сама от первого созвона до передачи файлов — вы всегда общаетесь с тем, кто делает работу.</p>
+        <div class="stats">
+          <div><b>3+</b><span class="mono muted">года в дизайне</span></div>
+          <div><b>10+</b><span class="mono muted">проектов для бизнеса</span></div>
+          <div><b>RU · EN</b><span class="mono muted">языки проектов</span></div>
+        </div>
+        <div class="cases">
+          <div class="case"><span class="mono" style="color:var(--lime)">(01)</span><div><b>Центр интимной эстетики</b><p class="muted">Логотип в 2024-м, затем сайт на Tilda, сейчас — платформа в коде. Клиент вернулся после логотипа и остаётся со мной с 2024 года.</p></div></div>
+          <div class="case"><span class="mono" style="color:var(--lime)">(02)</span><div><b>PerfectMatch</b><p class="muted">HR-консалтинг для крупного бизнеса: логотип в трёх вариантах, мини-гайдлайн и двуязычный сайт.</p></div></div>
+          <div class="case"><span class="mono" style="color:var(--lime)">(03)</span><div><b>NTGUILTY, EURASIA, МЯСО &amp; БУЛКА и другие</b><p class="muted">Сайты для адвокатов, магазина профкосметики, бургерной, туров и тренера.</p></div></div>
+        </div>
+        <div class="links">
+          <a class="btn ghost small" href="https://www.behance.net/3649e2cc" target="_blank" rel="noopener">Behance ↗</a>
+          <a class="btn ghost small" href="https://dprofile.ru/devenas" target="_blank" rel="noopener">Dprofile ↗</a>
+          <a class="btn ghost small" href="https://experts.tilda.ru/devenas" target="_blank" rel="noopener">Tilda Experts ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 TERMS -->
+  <section id="terms">
+    <div class="shead"><span class="mono">[07] Условия</span><span class="mono muted">Без мелкого шрифта</span></div>
+    <div class="stitle"><h2>Как <span class="mark">договоримся</span></h2><p>Всё, что важно знать до старта.</p></div>
+    <div class="grid g3 terms">
+      <div class="card"><span class="card-idx mono">(01)</span><h3>Оплата 50 / 50</h3><p>50% — предоплата перед стартом, 50% — после утверждения логотипа, до передачи исходников.</p></div>
+      <div class="card"><span class="card-idx mono">(02)</span><h3>Два круга правок на этап</h3><p>Входят в стоимость. Возврат к уже утверждённому этапу — дополнительный круг за 7 000 ₽.</p></div>
+      <div class="card"><span class="card-idx mono">(03)</span><h3>Права переходят вам</h3><p>Исключительные права — по договору отчуждения после полной оплаты. Этого достаточно для регистрации товарного знака.</p></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr;border-top:0">
+      <div class="card">
+        <span class="card-idx mono">(04) Что нужно от вас на старте</span>
+        <ul class="checklist">
+          <li>Один человек, который принимает решения по проекту</li>
+          <li>1,5 часа на интервью с собственником и 30 минут — с менеджером по продажам</li>
+          <li>Фото площадок, контейнеров, техники и готовых домов</li>
+          <li>Размеры бортов машин и места под вывеску</li>
+          <li>Ответ на материалы в течение 2 рабочих дней — так сроки не сдвигаются</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 FAQ -->
+  <section id="faq">
+    <div class="shead"><span class="mono">[08] Вопросы</span><span class="mono muted">Коротко о важном</span></div>
+    <div style="margin-top:56px">
+      <details><summary>А если ни одно направление знака не понравится?</summary><p>Перед эскизами мы утверждаем платформу и мудборд, поэтому промахнуться сложно. Если всё же ни одно направление не подойдёт, сделаю ещё одно в рамках правок этапа.</p></details>
+      <details><summary>Почему в знаке не будет дома, если вы строите дома?</summary><p>Основной спрос — контейнеры: их покупают и арендуют каждый день. Дом в знаке превратит вас в домостроительную компанию и отпугнёт основной поток. Дома мы покажем на сайте и в рекламе как «верхнюю полку».</p></details>
+      <details><summary>Логотип можно будет покрасить на контейнер?</summary><p>Да, это главное требование. Знак работает в одну краску, без градиентов и тонких линий. Вы получите трафарет в натуральную величину и номера краски по RAL.</p></details>
+      <details><summary>Можно начать с логотипа, а стиль заказать потом?</summary><p>Да. Логотип станет основой, а фирменный стиль и носители можно заказать позже — без переделки знака.</p></details>
+      <details><summary>Сможете потом сделать сайт в новом стиле?</summary><p>Да, я веб-дизайнер: делаю лендинги, многостраничные сайты и магазины на Tilda или в коде. Цены — в списке дополнительных услуг выше.</p></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" style="padding-bottom:64px">
+    <div class="cta">
+      <div>
+        <span class="mono">[09] Следующий шаг</span>
+        <h2 style="margin-top:24px">Обсудим ваш бренд?</h2>
+        <p>Напишите, какой пакет ближе, — в течение дня пришлю договор и счёт. Старт — в течение недели после предоплаты. Предложение действует до 7 ноября 2026 года.</p>
+      </div>
+      <div class="channels">
+        <a href="https://t.me/devenas" target="_blank" rel="noopener"><span>Telegram</span><span>@devenas ↗</span></a>
+        <a href="https://vk.com/devenas.design" target="_blank" rel="noopener"><span>ВКонтакте</span><span>devenas.design ↗</span></a>
+        <a href="https://www.behance.net/3649e2cc" target="_blank" rel="noopener"><span>Behance</span><span>портфолио ↗</span></a>
+        <span class="mono" style="padding-top:16px;opacity:.8">Отвечаю в будни с 08:00 до 19:00</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="word">DEVENAS</div>
+    <div class="row mono muted"><span>Коммерческое предложение для «Стройкомфорт Стил» · 08.10.2026</span><span>© 2026 Devenas</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
