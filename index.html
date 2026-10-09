@@ -232,6 +232,7 @@ section{padding-top:clamp(64px,8vw,104px)}
 /* deliverables */
 .deliv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .deliv .card{display:flex;flex-direction:column}
+.deliv .card .idx{align-self:flex-start}
 .deliv .card p{flex:1}
 .deliv .fmt{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px}
 
@@ -317,6 +318,78 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
   .stats div{padding:14px}
   .case{grid-template-columns:1fr;gap:10px}
+}
+/* mobile rhythm: 8px grid, 16px gutters, 12px between cards, 56px between sections */
+@media (max-width:640px){
+  body{font-size:15px}
+  section{padding-top:56px}
+  .hero{padding-top:104px}
+  .hero-meta{flex-direction:column;gap:6px;margin-bottom:24px}
+  .hero-row{margin-top:20px;gap:24px}
+  .hero-row p{font-size:16px}
+  .hero-actions{gap:16px}
+  .showcase{margin-top:32px;border-radius:24px;padding:40px 16px 56px}
+  .facts{gap:8px;margin-top:8px}
+  .fact{border-radius:20px}
+  .fact b{font-size:40px}
+  .fact span{font-size:13px;margin-top:8px}
+  .shead{gap:12px;margin-bottom:24px}
+  .shead .label{margin-bottom:12px}
+  .shead p{font-size:16px}
+  h2{font-size:34px}
+  .card{padding:20px;border-radius:20px}
+  .card .idx{margin-bottom:16px;height:28px;min-width:28px;font-size:12px}
+  .card p{font-size:14px}
+  .bento3,.deliv,.prices,.marks{gap:8px}
+  .essence{margin-top:8px;padding:28px 20px;gap:16px;border-radius:24px}
+  .essence h3{font-size:34px}
+  .essence p{font-size:14px}
+  .card.tz{padding:0}
+  .tz-head{padding:16px 20px}
+  .tz-row{padding:18px 20px;gap:8px}
+  .tz-row dt{font-size:16px}
+  .tz-row dd{font-size:14px}
+  .steps{gap:8px}
+  .step{grid-template-columns:auto 1fr;gap:12px 12px;align-items:center}
+  .step>ul,.step>.step-out,.step>.out,.step>.chips,.step>.brief{grid-column:1/-1}
+  .step ul{font-size:14px}
+  .tl{padding:16px;margin-top:32px}
+  .tl-row{margin-top:6px}
+  .tl-bar{padding:12px 14px}
+  .gates{margin-top:12px;gap:6px}
+  .price{padding:22px 20px}
+  .price .ph{margin-bottom:16px}
+  .price h3{font-size:24px}
+  .amount{font-size:44px;margin:18px 0}
+  .price ul{padding-top:14px;margin-bottom:20px}
+  .price li{font-size:14px;padding:5px 0}
+  .addons{margin-top:8px;padding:4px 20px}
+  .addon{padding:14px 0;font-size:14px}
+  .foot{font-size:13px;margin-top:12px}
+  .deliv .fmt{margin-top:16px}
+  .about{gap:8px}
+  .me{min-height:0;gap:28px}
+  .avatar{width:64px;height:64px;font-size:22px}
+  .stats{margin-top:16px}
+  .stats b{font-size:26px}
+  .stats div{padding:12px}
+  .stats span{font-size:12px;line-height:1.35;display:block;margin-top:4px}
+  .cases{margin-top:16px}
+  .case{padding:14px 0}
+  .links{margin-top:16px}
+  .faq{gap:6px}
+  .faq details{border-radius:16px}
+  .faq summary{padding:16px 16px;font-size:16px;gap:12px}
+  .faq summary i{width:28px;height:28px}
+  .faq summary i::before,.faq summary i::after{left:8px;top:13.25px}
+  .faq .ans p{padding:0 16px 16px;font-size:14px}
+  .cta{padding:32px 20px;border-radius:24px}
+  .cta h2{font-size:34px}
+  .cta-row{margin-top:24px;gap:20px}
+  .cta-row p{font-size:14px}
+  .cta-btns .btn{flex:1;justify-content:space-between}
+  footer{padding:32px 0 40px}
+  footer .wrap{flex-direction:column;gap:6px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important}
