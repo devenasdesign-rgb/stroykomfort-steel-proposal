@@ -207,6 +207,29 @@ section{padding-top:clamp(64px,8vw,104px)}
 .addon b{font-weight:500;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
 .foot{margin-top:16px;font-size:14px;color:var(--muted)}
 
+/* tz */
+.tz{padding:0;overflow:hidden}
+.tz-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px clamp(24px,2.6vw,36px);border-bottom:1px solid var(--line);background:var(--bg)}
+.tz-head b{font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:-.01em}
+.tz-row{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:24px clamp(24px,2.6vw,36px);border-bottom:1px solid var(--line);transition:background .4s}
+.tz-row:last-child{border-bottom:0}
+.tz-row:hover{background:#FBFAF8}
+.tz-row dt{display:flex;gap:12px;align-items:baseline;font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:-.015em}
+.tz-row dt span{font-family:var(--text);font-size:12px;font-weight:500;color:var(--muted);min-width:20px}
+.tz-row dd{color:var(--ink2);font-size:15px}
+.tz-row dd ul{list-style:none}
+.tz-row dd li{position:relative;padding-left:18px;margin-top:4px}
+.tz-row dd li:first-child{margin-top:0}
+.tz-row dd li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--line2)}
+.tz-row dd li.no::before{background:transparent;border:1.5px solid var(--accent);width:5px;height:5px}
+.tz-row dd .chips{display:flex;flex-wrap:wrap;gap:6px}
+.tz-row.dark{background:var(--dark);color:#fff}
+.tz-row.dark:hover{background:var(--dark2)}
+.tz-row.dark dt span{color:var(--dmuted)}
+.tz-row.dark dd{color:rgba(255,255,255,.78)}
+.tz-row.dark dd li::before{background:var(--accent)}
+@media (max-width:760px){.tz-row{grid-template-columns:1fr;gap:10px}}
+
 /* deliverables */
 .deliv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .deliv .card{display:flex;flex-direction:column}
@@ -307,7 +330,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="bar">
     <a class="brand" href="#top">Devenas</a>
     <nav>
-      <a href="#task">Задача</a><a href="#steps">Этапы</a><a href="#prices">Стоимость</a><a href="#result">Результат</a><a href="#about">Обо мне</a>
+      <a href="#task">Задача</a><a href="#tz">ТЗ</a><a href="#steps">Этапы</a><a href="#prices">Стоимость</a><a href="#result">Результат</a><a href="#about">Обо мне</a>
     </nav>
     <a class="btn small" href="https://t.me/devenas" target="_blank" rel="noopener">Написать <span class="arr">→</span></a>
   </div>
@@ -371,11 +394,37 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
+<!-- TZ -->
+<section id="tz">
+  <div class="wrap">
+    <div class="shead">
+      <div><span class="label" data-r>02 — Техническое задание</span><h2 data-r style="--d:.05s">ТЗ по вашему описанию</h2></div>
+      <p data-r style="--d:.1s">Собрала из вашего описания бизнеса и видения бренда — без анкет и дополнительных вопросов. Если что-то нужно поправить, внесём изменения до старта.</p>
+    </div>
+    <div class="card tz" data-r>
+      <div class="tz-head"><b>Логотип и фирменный стиль «Стройкомфорт Стил»</b><span class="chip">Черновик на согласование</span></div>
+      <dl>
+        <div class="tz-row"><dt><span>01</span>Компания</dt><dd>Производитель и поставщик морских контейнеров. Основа — продажа и аренда контейнеров 20 и 40 футов, стандартных и под задачу. Дополнительно — модули и дома из контейнеров под ключ.</dd></div>
+        <div class="tz-row"><dt><span>02</span>Задача бренда</dt><dd>С первого взгляда клиент понимает: это производитель и надёжный поставщик контейнеров, а не доска объявлений и не строительная бригада. Дом показываем как «верхнюю полку»: контейнер умеем довести до жилья.</dd></div>
+        <div class="tz-row"><dt><span>03</span>Аудитории</dt><dd><ul><li>Бизнес и частники, которым нужен контейнер: стройка, склад, хранение, логистика, аренда на объект. Сравнивают цену, состояние, срок подачи и доставку, решают быстро.</li><li>Частные клиенты, которым нужен дом, дача, баня или гараж из контейнера с бюджетом до 2 млн ₽. Им важно готовое жильё: утепление, окна, инженерия, монтаж — и чтобы результат не выглядел как бытовка со стройки.</li></ul></dd></div>
+        <div class="tz-row"><dt><span>04</span>Почему выбирают вас</dt><dd><ul><li>Свой производственный цикл с 2004 года, площадки в Москве и Санкт-Петербурге</li><li>Контейнер можно купить, взять в аренду или довести до модуля и дома под ключ</li><li>Срок на простых позициях — от нескольких дней, доставка и монтаж своими силами</li></ul></dd></div>
+        <div class="tz-row"><dt><span>05</span>Характер</dt><dd>Собранный, промышленный, спокойный: сталь, срок, своё производство. Надёжный поставщик, у которого можно взять и ящик, и дом. Не дешёвый строймаркет и не архитектурное бюро.</dd></div>
+        <div class="tz-row"><dt><span>06</span>Название</dt><dd>«Стройкомфорт» — основная часть, «Стил» — подпись, а не второй логотип. Слово «комфорт» остаётся: оно объясняет, почему у поставщика контейнеров есть жилые модули.</dd></div>
+        <div class="tz-row"><dt><span>07</span>Знак</dt><dd>Лицо бренда — контейнер. Геометричный знак: торец модуля или характерный объём контейнера. Дом — не герой знака, бытовка в айдентике не выделяется.</dd></div>
+        <div class="tz-row"><dt><span>08</span>Цвет и шрифт</dt><dd>База — графит или тёмная сталь и один тёплый акцент: медь, терракота или приглушённый янтарь. Шрифт — плотный гротеск с хорошей кириллицей.</dd></div>
+        <div class="tz-row"><dt><span>09</span>Технические требования</dt><dd><ul><li>Знак работает в одну краску</li><li>Читается на тёмном металле контейнера и на светлом бланке</li><li>Работает мелко в документе и крупно на борту</li><li>Цена — в объявлениях и на сайте, в знаке её нет</li></ul></dd></div>
+        <div class="tz-row"><dt><span>10</span>Где будет стиль</dt><dd><div class="chips"><span class="chip">Сайт</span><span class="chip">Объявления</span><span class="chip">КП, договоры, бланки</span><span class="chip">Борта машин</span><span class="chip">Маркировка контейнеров</span><span class="chip">Вывеска</span><span class="chip">Спецодежда</span><span class="chip">Реклама и щиты</span><span class="chip">Готовые дома — аккуратно</span></div><p class="muted" style="font-size:14px;margin-top:10px">Какие носители войдут в работу, зависит от выбранного пакета.</p></dd></div>
+        <div class="tz-row dark"><dt><span>11</span>Чего избегаем</dt><dd><ul><li>Буквальной гофры на всё полотно, каски, кирпича, шестерёнки</li><li>Градиентов и тонких шрифтов</li><li>Портового синего и оранжевого строймаркета</li><li>Огромного логотипа по фасаду готового дома</li><li>Стиля под госзаказ и тендеры</li></ul></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <!-- STEPS -->
 <section id="steps">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>02 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
+      <div><span class="label" data-r>03 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
       <p data-r style="--d:.1s">Опираюсь на ваше описание и видение бренда — дополнительный бриф не нужен, вопросы решаем в переписке. Каждый этап заканчивается вашим утверждением.</p>
     </div>
     <div class="steps-wrap">
@@ -388,7 +437,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="steps">
         <div class="card step key" data-r data-name="ТЗ по вашему описанию">
           <span class="idx">01</span><h3>ТЗ по вашему описанию</h3>
-          <ul><li>Беру за основу ваше описание бизнеса и видение бренда — заполнять анкету не нужно</li><li>Собираю из него техническое задание и присылаю на согласование</li><li>Если понадобятся детали, уточню в переписке</li></ul>
+          <ul><li>ТЗ уже собрано по вашему описанию — оно выше, в разделе 02</li><li>Согласуем его и при необходимости внесём поправки — заполнять анкету не нужно</li><li>Если понадобятся детали, уточню в переписке</li></ul>
           <div class="chips"><span class="chip">Основное направление</span><span class="chip">Клиенты</span><span class="chip">Почему выбирают вас</span><span class="chip">Характер бренда</span><span class="chip">Носители</span><span class="chip">Визуальные ориентиры</span></div>
           <span class="out">Результат: согласованное ТЗ</span>
         </div>
@@ -420,7 +469,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="prices">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>03 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
+      <div><span class="label" data-r>04 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
       <p data-r style="--d:.1s">Сумма фиксируется в договоре и не меняется в ходе работы. Работа по вашему готовому описанию и карта бренда позволили снизить стоимость без потери качества.</p>
     </div>
     <div class="prices">
@@ -487,7 +536,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="result">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>04 — Результат</span><h2 data-r style="--d:.05s">Файлы, готовые к работе</h2></div>
+      <div><span class="label" data-r>05 — Результат</span><h2 data-r style="--d:.05s">Файлы, готовые к работе</h2></div>
       <p data-r style="--d:.1s">Печатник, маляр, производитель вывесок или веб-студия получат всё необходимое — без звонков дизайнеру.</p>
     </div>
     <div class="deliv">
@@ -507,7 +556,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="about">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>05 — Обо мне</span><h2 data-r style="--d:.05s">Кто будет делать ваш бренд</h2></div>
+      <div><span class="label" data-r>06 — Обо мне</span><h2 data-r style="--d:.05s">Кто будет делать ваш бренд</h2></div>
     </div>
     <div class="about">
       <div class="card me" data-r>
@@ -545,7 +594,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="terms">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>06 — Условия</span><h2 data-r style="--d:.05s">Как договоримся</h2></div>
+      <div><span class="label" data-r>07 — Условия</span><h2 data-r style="--d:.05s">Как договоримся</h2></div>
     </div>
     <div class="bento3">
       <div class="card hover" data-r><span class="idx">50/50</span><h3>Оплата в два этапа</h3><p>50% — предоплата перед стартом, 50% — после утверждения логотипа, до передачи исходников.</p></div>
@@ -559,7 +608,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="faq">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>07 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
+      <div><span class="label" data-r>08 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
     </div>
     <div class="faq" data-r>
       <details><summary>Нужно ли заполнять анкету или созваниваться?<i></i></summary><div class="ans"><p>Нет. Я работаю по вашему описанию бизнеса и видению бренда, а вопросы по ходу работы решаем в переписке. Если захотите обсудить что-то голосом — тоже можно.</p></div></details>
