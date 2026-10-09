@@ -6,324 +6,297 @@
 <title>Коммерческое предложение · Стройкомфорт Стил</title>
 <meta name="description" content="Логотип, фирменный стиль и брендбук для «Стройкомфорт Стил». Коммерческое предложение дизайнера Анастасии Девентейчик.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4F3F0">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0E'/%3E%3Cpath fill='%23C49A6C' d='M6 9h9v14H6zM17 9h9v14h-9z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0C'/%3E%3Cpath fill='%23fff' d='M7 9h8v14H7zM17 9h8v14h-8z'/%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#0F0F0E;--bg2:#151513;--ink:#EDE8DF;--muted:rgba(237,232,223,.58);--faint:rgba(237,232,223,.34);--line:rgba(237,232,223,.12);
-  --paper:#ECE7DE;--paper-ink:#171614;--paper-muted:rgba(23,22,20,.6);--paper-line:rgba(23,22,20,.14);
-  --copper:#C49A6C;--copper-deep:#A35A38;--graphite:#2F3234;--steel:#7D8185;
-  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;
-  --ease:cubic-bezier(.2,.7,.1,1);--pad:clamp(20px,4vw,64px);
+  --bg:#F4F3F0;--card:#FFFFFF;--ink:#0B0B0C;--ink2:#3A3A3D;--muted:#76767A;--line:rgba(11,11,12,.08);--line2:rgba(11,11,12,.14);
+  --dark:#0B0B0C;--dark2:#18181A;--dline:rgba(255,255,255,.1);--dmuted:rgba(255,255,255,.56);
+  --accent:#B5653A;--accent-soft:rgba(181,101,58,.1);
+  --graphite:#2F3234;
+  --display:'Inter Tight',system-ui,-apple-system,sans-serif;--text:'Inter',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);--r:24px;--pad:clamp(16px,3.4vw,48px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
 a{color:inherit;text-decoration:none}
 svg{display:block}
-::selection{background:var(--copper);color:var(--bg)}
-.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
-.eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--copper)}
+::selection{background:var(--ink);color:#fff}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.035em;line-height:1.02}
+h2{font-size:clamp(36px,5.2vw,72px);letter-spacing:-.045em}
+h3{font-size:clamp(20px,1.7vw,24px);letter-spacing:-.02em;line-height:1.2}
 .muted{color:var(--muted)}
-h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-height:1.02}
-h2{font-size:clamp(40px,5.6vw,84px)}
-h3{font-size:clamp(24px,2.2vw,32px);font-weight:400;line-height:1.15}
-em{font-style:italic;color:var(--copper)}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--ink2)}
+.label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.chip{display:inline-flex;align-items:center;font-size:12px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--bg);color:var(--ink2);border:1px solid var(--line)}
 
-/* progress + header */
-.progress{position:fixed;top:0;left:0;right:0;height:1px;background:var(--copper);transform-origin:left;transform:scaleX(0);z-index:60}
-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:transform .5s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent}
-header.solid{background:rgba(15,15,14,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-header.hide{transform:translateY(-100%)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.brand{font-family:var(--serif);font-size:22px;letter-spacing:.08em}
-.brand small{font-family:var(--sans);font-size:10px;letter-spacing:.24em;color:var(--muted);margin-left:12px;text-transform:uppercase}
-nav{display:flex;gap:34px;font-size:13px}
-nav a{position:relative;color:var(--muted);transition:color .3s}
-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--copper);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
-nav a:hover{color:var(--ink)}
-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+/* header */
+header{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
+.bar{pointer-events:auto;max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 22px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border:1px solid var(--line);box-shadow:0 8px 30px -12px rgba(11,11,12,.12);transition:transform .6s var(--ease),box-shadow .4s}
+header.hide .bar{transform:translateY(-140%)}
+.brand{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.01em}
+nav{display:flex;gap:4px}
+nav a{font-size:14px;color:var(--ink2);padding:8px 14px;border-radius:999px;transition:background .3s,color .3s}
+nav a:hover{background:var(--bg);color:var(--ink)}
+nav a.on{background:var(--ink);color:#fff}
 
 /* buttons */
-.btn{position:relative;display:inline-flex;align-items:center;gap:14px;padding:18px 30px;border:1px solid var(--copper);color:var(--ink);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;overflow:hidden;isolation:isolate;transition:color .5s var(--ease),border-color .5s;will-change:transform}
-.btn::before{content:"";position:absolute;inset:0;background:var(--copper);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease);z-index:-1}
-.btn:hover{color:var(--bg)}
-.btn:hover::before{transform:scaleX(1);transform-origin:left}
-.btn .arr{display:inline-block;transition:transform .5s var(--ease)}
-.btn:hover .arr{transform:translateX(6px)}
-.btn.solid{background:var(--copper);color:var(--bg)}
-.btn.solid::before{background:var(--ink)}
-.btn.small{padding:12px 20px;font-size:11px}
-.link{position:relative;font-size:14px;color:var(--muted);transition:color .3s}
-.link::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;opacity:.5}
-.link:hover{color:var(--copper)}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:999px;background:var(--ink);color:#fff;font-size:15px;font-weight:500;letter-spacing:-.01em;transition:transform .5s var(--ease),background .3s,box-shadow .5s var(--ease);will-change:transform}
+.btn:hover{box-shadow:0 14px 30px -12px rgba(11,11,12,.45)}
+.btn:active{transform:scale(.97)}
+.btn .arr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.14);transition:transform .5s var(--ease)}
+.btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
+.btn.small{height:42px;padding:0 8px 0 18px;font-size:14px}
+.btn.light{background:var(--card);color:var(--ink);border:1px solid var(--line2)}
+.btn.light .arr{background:var(--bg)}
+.btn.white{background:#fff;color:var(--ink)}
+.btn.white .arr{background:var(--bg)}
+.tlink{font-size:15px;font-weight:500;color:var(--ink2);border-bottom:1px solid var(--line2);padding-bottom:2px;transition:color .3s,border-color .3s}
+.tlink:hover{color:var(--ink);border-color:var(--ink)}
+
+/* reveal */
+.js [data-r]{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js [data-r].in{opacity:1;transform:none}
+.js .split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.js .split .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--ease)}
+.loaded .split .w>span{transform:none}
 
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:140px 0 64px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,70%) var(--my,30%),rgba(196,154,108,.13),transparent 60%);pointer-events:none}
-.hero::after{content:"";position:absolute;right:-10vw;top:12vh;width:52vw;height:52vw;max-width:760px;max-height:760px;border:1px solid var(--line);border-radius:50%;pointer-events:none}
-.orbit{position:absolute;right:-10vw;top:12vh;width:52vw;height:52vw;max-width:760px;max-height:760px;pointer-events:none;animation:spin 60s linear infinite}
-.orbit::before{content:"";position:absolute;left:50%;top:-4px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--copper);box-shadow:0 0 18px rgba(196,154,108,.8)}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero .wrap{position:relative;z-index:1;width:100%}
-.hero-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:6vh}
-.hero h1{font-size:clamp(46px,9.4vw,152px);line-height:.94;letter-spacing:-.025em}
-.line{display:block;overflow:hidden;padding-bottom:.06em}
-.line>span{display:block}
-.js .line>span{transform:translateY(105%);transition:transform 1.3s var(--ease)}
-.loaded .line>span{transform:none}
-.loaded .line:nth-child(2)>span{transition-delay:.12s}
-.loaded .line:nth-child(3)>span{transition-delay:.24s}
-.hero-bottom{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-top:7vh;padding-top:32px;border-top:1px solid var(--line)}
-.hero-bottom p{font-size:clamp(17px,1.4vw,20px);max-width:560px;color:var(--muted)}
-.hero-actions{display:flex;gap:28px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.scroll-cue{position:absolute;left:50%;bottom:22px;width:1px;height:44px;background:var(--line);overflow:hidden}
-.scroll-cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--copper);animation:cue 2.4s var(--ease) infinite}
-@keyframes cue{to{top:110%}}
+.hero{padding:clamp(130px,16vw,180px) 0 0}
+.hero-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:clamp(28px,4vw,48px)}
+.hero h1{font-size:clamp(44px,8.2vw,124px);letter-spacing:-.055em;line-height:.95;max-width:1120px}
+.hero h1 .soft{color:var(--muted);white-space:nowrap}
+.hero-row{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:clamp(28px,4vw,48px)}
+.hero-row p{font-size:clamp(17px,1.5vw,20px);color:var(--ink2);max-width:560px;line-height:1.5}
+.hero-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.showcase{margin-top:clamp(48px,6vw,80px);position:relative;border-radius:calc(var(--r) + 8px);background:var(--graphite);overflow:hidden;aspect-ratio:16/7;display:grid;place-items:center;isolation:isolate}
+.showcase::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 0%,rgba(255,255,255,.09),transparent 70%);z-index:-1}
+.showcase .grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.lock{display:flex;align-items:center;gap:clamp(14px,2vw,28px);color:#fff}
+.lock svg{width:clamp(56px,8vw,112px)}
+.lock b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(26px,4.6vw,68px);letter-spacing:-.02em;line-height:1}
+.lock span{display:block;font-family:var(--display);font-weight:600;font-size:clamp(11px,1.3vw,19px);letter-spacing:.62em;color:#B9BCBF;margin-top:clamp(6px,.8vw,12px)}
+.js .showcase .lock{opacity:0;transform:scale(.96);transition:opacity 1.2s var(--ease) .5s,transform 1.6s var(--ease) .5s}
+.loaded .showcase .lock{opacity:1;transform:none}
+.showcase .tag{position:absolute;left:20px;bottom:18px;font-size:12px;color:rgba(255,255,255,.5)}
+.showcase .tag.r{left:auto;right:20px}
 
-/* reveal system */
-.js [data-reveal]{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease),filter 1.1s var(--ease);transition-delay:var(--d,0s)}
-.js [data-reveal].in{opacity:1;transform:none;filter:none}
-.rule{height:1px;background:var(--line)}
-.js .rule{transform:scaleX(0);transform-origin:left;transition:transform 1.6s var(--ease)}
-.js .rule.in{transform:none}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.fact{background:var(--card);border-radius:var(--r);padding:28px;border:1px solid var(--line)}
+.fact b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(40px,4.4vw,60px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:12px;font-size:14px;color:var(--muted);line-height:1.45}
 
 /* sections */
-section{padding:clamp(96px,13vw,180px) 0 0}
-.shead{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;margin-bottom:clamp(48px,6vw,88px)}
-.num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--copper);padding-top:14px}
-.shead p{margin-top:28px;max-width:620px;color:var(--muted);font-size:18px}
+section{padding-top:clamp(104px,13vw,168px)}
+.shead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.shead .label{margin-bottom:20px}
+.shead p{font-size:18px;color:var(--ink2);max-width:520px;line-height:1.55;justify-self:end}
 
-/* facts */
-.facts{display:grid;grid-template-columns:repeat(4,1fr)}
-.fact{padding:44px 28px 8px 0}
-.fact+.fact{padding-left:28px;border-left:1px solid var(--line)}
-.fact b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(56px,6.4vw,96px);line-height:.9;letter-spacing:-.03em}
-.fact span{display:block;margin-top:14px;font-size:13px;color:var(--muted);max-width:210px}
+.card{background:var(--card);border-radius:var(--r);border:1px solid var(--line);padding:clamp(24px,2.6vw,36px);transition:transform .6s var(--ease),box-shadow .6s var(--ease),border-color .4s}
+.hover:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(11,11,12,.28)}
+.card .idx{display:inline-grid;place-items:center;min-width:32px;height:32px;padding:0 10px;border-radius:999px;background:var(--bg);font-size:13px;font-weight:500;color:var(--ink2);margin-bottom:28px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.bento3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.essence{margin-top:12px;background:var(--dark);color:#fff;border-radius:calc(var(--r) + 8px);padding:clamp(32px,5vw,72px);display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end}
+.essence h3{font-size:clamp(36px,5vw,72px);letter-spacing:-.05em;line-height:1}
+.essence h3 span{color:var(--dmuted)}
+.essence p{color:var(--dmuted);max-width:480px}
 
-/* task */
-.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
-.point{padding-top:28px;border-top:1px solid var(--line)}
-.point .eyebrow{display:block;margin-bottom:22px}
-.point h3{margin-bottom:14px}
-.point p{color:var(--muted)}
-.essence{margin-top:clamp(72px,9vw,128px);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
-.essence blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(44px,5.6vw,88px);line-height:1;letter-spacing:-.02em}
-.essence p{color:var(--muted);max-width:520px}
-
-/* paper section */
-.paper{background:var(--paper);color:var(--paper-ink);margin-top:clamp(96px,13vw,180px);padding-bottom:clamp(96px,12vw,160px)}
-.paper .muted,.paper .shead p{color:var(--paper-muted)}
-.paper .rule{background:var(--paper-line)}
-.paper em{color:var(--copper-deep)}
-.paper .eyebrow{color:var(--copper-deep)}
-.marks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
-.markcard{display:flex;flex-direction:column;gap:20px}
-.stage{position:relative;aspect-ratio:4/3;background:#F6F2EB;border:1px solid var(--paper-line);display:grid;place-items:center;overflow:hidden;transition:background .7s var(--ease)}
-.stage svg{width:38%;transition:transform 1s var(--ease)}
-.stage path{transition:fill .7s var(--ease)}
-.markcard:hover .stage{background:var(--graphite)}
-.markcard:hover .stage path.g{fill:#EDE8DF}
-.markcard:hover .stage svg{transform:scale(1.06)}
-.js .marks .stage svg{clip-path:inset(100% 0 0 0);transition:clip-path 1.4s var(--ease),transform 1s var(--ease)}
-.js .marks.in .markcard:nth-child(1) svg{clip-path:inset(0);transition-delay:.1s,0s}
-.js .marks.in .markcard:nth-child(2) svg{clip-path:inset(0);transition-delay:.3s,0s}
-.js .marks.in .markcard:nth-child(3) svg{clip-path:inset(0);transition-delay:.5s,0s}
-.markcard .meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.markcard .meta b{font-family:var(--serif);font-weight:400;font-size:26px}
-.pill{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--copper-deep);color:var(--copper-deep)}
-.lockup{margin-top:clamp(40px,5vw,72px);background:var(--graphite);color:#fff;display:flex;align-items:center;justify-content:center;gap:26px;padding:clamp(48px,7vw,104px) 24px;flex-wrap:wrap}
-.lockup .wm b{display:block;font-family:var(--sans);font-weight:600;font-size:clamp(24px,3.6vw,52px);letter-spacing:.02em;line-height:1}
-.lockup .wm span{display:block;font-family:var(--sans);font-weight:600;font-size:clamp(11px,1.1vw,16px);letter-spacing:.62em;color:#C9CBCC;margin-top:10px}
-.swatches{display:grid;grid-template-columns:3fr 1.3fr 1fr 1fr .7fr;margin-top:2px;height:clamp(110px,12vw,170px)}
-.swatches div{padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-.js .swatches div{transform:scaleY(0);transform-origin:bottom;transition:transform 1s var(--ease)}
-.js .swatches.in div{transform:none}
-.js .swatches.in div:nth-child(2){transition-delay:.08s}.js .swatches.in div:nth-child(3){transition-delay:.16s}.js .swatches.in div:nth-child(4){transition-delay:.24s}.js .swatches.in div:nth-child(5){transition-delay:.32s}
-.note{margin-top:22px;font-size:14px;color:var(--muted)}
-.paper .note{color:var(--paper-muted)}
+/* marks */
+.marks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mark{padding:0;overflow:hidden}
+.mark .stage{aspect-ratio:4/3;display:grid;place-items:center;background:var(--card);border-bottom:1px solid var(--line);transition:background .7s var(--ease)}
+.mark .stage svg{width:34%;transition:transform .9s var(--ease)}
+.mark .stage path{transition:fill .7s var(--ease)}
+.mark:hover .stage{background:var(--graphite)}
+.mark:hover .stage path.g{fill:#fff}
+.mark:hover .stage svg{transform:scale(1.07)}
+.mark .body{padding:22px 24px 26px}
+.mark .top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}
+.badge{font-size:12px;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.palette{display:grid;grid-template-columns:2.6fr 1.3fr 1fr 1fr .8fr;gap:6px;margin-top:12px;height:clamp(96px,10vw,140px)}
+.palette div{border-radius:16px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:12px;font-weight:500;line-height:1.35}
+.palette small{font-weight:400;opacity:.7}
+.js .palette div{transform:scaleY(.2);opacity:0;transform-origin:bottom;transition:transform 1s var(--ease),opacity .6s var(--ease)}
+.js .palette.in div{transform:none;opacity:1}
+.js .palette.in div:nth-child(2){transition-delay:.06s}.js .palette.in div:nth-child(3){transition-delay:.12s}.js .palette.in div:nth-child(4){transition-delay:.18s}.js .palette.in div:nth-child(5){transition-delay:.24s}
+.hint{margin-top:16px;font-size:14px;color:var(--muted)}
 
 /* steps */
-.steps{border-top:1px solid var(--line)}
-.step{position:relative;display:grid;grid-template-columns:110px 1.1fr 1.5fr 210px;gap:32px;padding:38px 0;border-bottom:1px solid var(--line);align-items:start}
-.step::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:100%;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
-.step:hover::before{transform:scaleX(1)}
-.step-n{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--faint);transition:color .5s}
-.step:hover .step-n{color:var(--copper)}
-.step h3{transition:transform .7s var(--ease)}
-.step:hover h3{transform:translateX(8px)}
-.step ul{list-style:none;color:var(--muted)}
-.step li{padding-left:22px;position:relative;margin-bottom:8px}
-.step li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--copper)}
-.step-out{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);padding-top:8px}
-.step.key{background:linear-gradient(90deg,rgba(196,154,108,.08),transparent 70%)}
-.brief-topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.brief-topics span{font-size:12px;padding:5px 11px;border:1px solid var(--line);color:var(--muted);transition:border-color .4s,color .4s}
-.brief-topics span:hover{border-color:var(--copper);color:var(--ink)}
+.steps-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,4vw,64px);align-items:start}
+.steps-side{position:sticky;top:120px}
+.counter{font-family:var(--display);font-weight:500;font-size:clamp(88px,11vw,168px);letter-spacing:-.06em;line-height:.85;font-variant-numeric:tabular-nums;display:flex;align-items:flex-end}
+.counter small{font-size:.22em;letter-spacing:-.02em;color:var(--muted);margin:0 0 .5em .3em}
+.counter-name{margin-top:18px;font-family:var(--display);font-size:22px;font-weight:500;letter-spacing:-.02em;min-height:1.3em;transition:opacity .3s}
+.track{margin-top:24px;height:4px;border-radius:4px;background:var(--line2);overflow:hidden}
+.track i{display:block;height:100%;width:10%;background:var(--ink);border-radius:4px;transition:width .6s var(--ease)}
+.steps-side p{margin-top:24px;color:var(--muted);font-size:15px;max-width:340px}
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:18px 20px;opacity:.55;transition:opacity .5s var(--ease),transform .6s var(--ease),box-shadow .6s var(--ease),border-color .4s}
+.step.on{opacity:1;border-color:var(--line2);box-shadow:0 24px 48px -32px rgba(11,11,12,.3)}
+.step .idx{margin:0}
+.step h3{padding-top:2px}
+.step ul{grid-column:2;list-style:none;color:var(--ink2);font-size:15px}
+.step li{position:relative;padding-left:18px;margin-top:6px}
+.step li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--line2)}
+.step .out{grid-column:2;font-size:13px;font-weight:500;color:var(--accent)}
+.step .chips{grid-column:2;display:flex;flex-wrap:wrap;gap:6px}
+.step.key{background:var(--dark);color:#fff;border-color:var(--dark)}
+.step.key .idx{background:rgba(255,255,255,.1);color:#fff}
+.step.key ul{color:rgba(255,255,255,.75)}
+.step.key li::before{background:var(--accent)}
+.step.key .chip{background:rgba(255,255,255,.06);border-color:var(--dline);color:rgba(255,255,255,.8)}
+.step.key .out{color:#E3A47E}
 
 /* timeline */
-.tl{margin-top:clamp(64px,8vw,104px)}
-.tl-head{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line)}
-.tl-head div{padding:0 0 14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
-.tl-row{display:grid;grid-template-columns:repeat(5,1fr);padding:10px 0;border-bottom:1px solid var(--line)}
-.tl-bar{margin-right:8px;padding:16px 18px;border:1px solid var(--line);background:var(--bg2);font-size:13px;color:var(--muted)}
-.tl-bar b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;color:var(--ink);line-height:1.2}
-.tl-bar.key{border-color:var(--copper);background:linear-gradient(90deg,rgba(196,154,108,.16),rgba(196,154,108,.04))}
-.js .tl .tl-bar{clip-path:inset(0 100% 0 0);transition:clip-path 1.3s var(--ease)}
-.js .tl.in .tl-bar{clip-path:inset(0)}
-.js .tl.in .tl-row:nth-child(3) .tl-bar{transition-delay:.2s}
-.js .tl.in .tl-row:nth-child(4) .tl-bar{transition-delay:.4s}
-.js .tl.in .tl-row:nth-child(5) .tl-bar{transition-delay:.6s}
-.gates{display:flex;flex-wrap:wrap;gap:12px 40px;padding-top:22px;font-size:13px;color:var(--muted)}
-.gates span::before{content:"◆";color:var(--copper);margin-right:10px;font-size:9px;vertical-align:2px}
+.tl{margin-top:clamp(48px,6vw,72px)}
+.tl-head,.tl-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tl-head div{font-size:13px;color:var(--muted);padding:0 4px 12px}
+.tl-row{margin-top:8px}
+.tl-bar{border-radius:14px;padding:14px 16px;background:var(--bg);border:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.35}
+.tl-bar b{display:block;font-family:var(--display);font-weight:500;font-size:16px;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.tl-bar.key{background:var(--ink);border-color:var(--ink);color:rgba(255,255,255,.6)}
+.tl-bar.key b{color:#fff}
+.js .tl .tl-bar{clip-path:inset(0 100% 0 0 round 14px);transition:clip-path 1.2s var(--ease)}
+.js .tl.in .tl-bar{clip-path:inset(0 0 0 0 round 14px)}
+.js .tl.in .tl-row:nth-child(3) .tl-bar{transition-delay:.15s}.js .tl.in .tl-row:nth-child(4) .tl-bar{transition-delay:.3s}.js .tl.in .tl-row:nth-child(5) .tl-bar{transition-delay:.45s}
+.gates{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 
 /* prices */
-.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);align-items:stretch}
-.price{position:relative;display:flex;flex-direction:column;padding:44px 36px 40px;border:1px solid var(--paper-line);background:#F4F0E8;overflow:hidden;transition:transform .8s var(--ease),box-shadow .8s var(--ease),border-color .6s,opacity 1.1s var(--ease),filter 1.1s var(--ease)}
-.price:hover{transform:translateY(-8px);box-shadow:0 40px 80px -40px rgba(23,22,20,.35);border-color:var(--copper-deep)}
-.price::after{content:"";position:absolute;top:0;left:-90%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-18deg);transition:left 1.1s var(--ease);pointer-events:none}
-.price:hover::after{left:130%}
-.price .eyebrow{margin-bottom:28px}
-.price h3{font-size:34px;margin-bottom:6px}
-.price .term{font-size:13px;color:var(--paper-muted)}
-.amount{font-family:var(--serif);font-weight:300;font-size:clamp(52px,5vw,76px);line-height:1;letter-spacing:-.03em;margin:30px 0;font-variant-numeric:tabular-nums}
-.amount small{font-size:.42em;margin-left:8px;letter-spacing:0}
-.price ul{list-style:none;flex:1;border-top:1px solid var(--paper-line);padding-top:22px;margin-bottom:34px}
-.price li{position:relative;padding:7px 0 7px 24px;font-size:15px}
-.price li::before{content:"";position:absolute;left:0;top:1.05em;width:12px;height:1px;background:var(--copper-deep)}
-.price li.plus{font-weight:500}
-.price .btn{align-self:flex-start;color:var(--paper-ink);border-color:var(--paper-ink)}
-.price .btn::before{background:var(--paper-ink)}
-.price .btn:hover{color:var(--paper)}
-.price.key{background:var(--bg);color:var(--ink);border-color:var(--bg);box-shadow:0 50px 90px -40px rgba(23,22,20,.55)}
-.price.key .term{color:var(--muted)}
-.price.key ul{border-color:var(--line)}
-.price.key li::before{background:var(--copper)}
-.price.key .eyebrow{color:var(--copper)}
-.price.key .btn{color:var(--bg);background:var(--copper);border-color:var(--copper)}
-.price.key .btn::before{background:var(--ink)}
-.price.key::after{background:linear-gradient(100deg,transparent,rgba(196,154,108,.2),transparent)}
-.price.key:hover{border-color:var(--copper)}
-.ribbon-flag{position:absolute;top:24px;right:24px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);display:flex;align-items:center;gap:10px}
-.ribbon-flag i{width:6px;height:6px;border-radius:50%;background:var(--copper);animation:pulse 2.2s var(--ease) infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(196,154,108,.6)}100%{box-shadow:0 0 0 12px rgba(196,154,108,0)}}
-.addons{margin-top:clamp(56px,6vw,88px)}
-.addon{display:grid;grid-template-columns:1fr auto;gap:24px;padding:20px 0;border-bottom:1px solid var(--paper-line);transition:padding .6s var(--ease),opacity 1.1s var(--ease),transform 1.1s var(--ease),filter 1.1s var(--ease)}
-.addon:hover{padding-left:12px}
-.addon b{font-family:var(--serif);font-weight:400;font-size:24px;white-space:nowrap}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:stretch}
+.price{display:flex;flex-direction:column;padding:32px}
+.price .ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;min-height:28px}
+.price h3{font-size:26px}
+.price .term{font-size:14px;color:var(--muted);margin-top:4px}
+.amount{font-family:var(--display);font-weight:500;font-size:clamp(46px,4.4vw,60px);letter-spacing:-.05em;line-height:1;margin:28px 0;font-variant-numeric:tabular-nums}
+.amount small{font-size:.4em;letter-spacing:-.01em;margin-left:6px;color:var(--muted)}
+.price ul{list-style:none;flex:1;border-top:1px solid var(--line);padding-top:20px;margin-bottom:28px}
+.price li{display:grid;grid-template-columns:20px 1fr;gap:10px;padding:6px 0;font-size:15px;color:var(--ink2)}
+.price li::before{content:"";width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5.5 9.2l2.2 2.2 4.8-4.8' fill='none' stroke='%230B0B0C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.price li.plus{color:var(--ink);font-weight:500}
+.price .btn{width:100%;justify-content:space-between;padding:0 8px 0 22px}
+.price.key{background:var(--dark);color:#fff;border-color:var(--dark)}
+.price.key .term,.price.key .amount small{color:var(--dmuted)}
+.price.key ul{border-color:var(--dline)}
+.price.key li{color:rgba(255,255,255,.78)}
+.price.key li.plus{color:#fff}
+.price.key li::before{background-color:rgba(255,255,255,.1);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5.5 9.2l2.2 2.2 4.8-4.8' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.price.key .badge{background:rgba(227,164,126,.16);color:#E3A47E}
+.addons{margin-top:12px;padding:8px 32px}
+.addon{display:flex;justify-content:space-between;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink2)}
+.addon:last-child{border-bottom:0}
+.addon b{font-weight:500;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.foot{margin-top:16px;font-size:14px;color:var(--muted)}
 
 /* deliverables */
-.deliv{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.deliv>div{position:relative;padding:36px 30px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-.deliv>div::before{content:"";position:absolute;inset:0;background:var(--bg2);transform:scaleY(0);transform-origin:bottom;transition:transform .7s var(--ease);z-index:-1}
-.deliv>div{isolation:isolate}
-.deliv>div:hover::before{transform:none}
-.deliv .eyebrow{color:var(--faint);display:block;margin-bottom:40px;transition:color .5s}
-.deliv>div:hover .eyebrow{color:var(--copper)}
-.deliv h3{font-size:26px;margin-bottom:12px}
-.deliv p{font-size:15px;color:var(--muted)}
-.deliv small{display:block;margin-top:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper)}
+.deliv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.deliv .card{display:flex;flex-direction:column}
+.deliv .card p{flex:1}
+.deliv .fmt{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px}
 
 /* about */
-.about{display:grid;grid-template-columns:.9fr 1.3fr;gap:clamp(40px,6vw,96px);align-items:start}
-.portrait{position:relative;aspect-ratio:4/5;border:1px solid var(--line);display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,rgba(196,154,108,.16),transparent 60%),var(--bg2);overflow:hidden}
-.portrait b{font-family:var(--serif);font-weight:300;font-size:clamp(110px,14vw,210px);letter-spacing:-.04em;line-height:1}
-.portrait b em{color:var(--copper)}
-.portrait>span{position:absolute;left:24px;bottom:22px;right:24px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.about h3{font-size:clamp(34px,3.8vw,56px);font-weight:300;line-height:1.05;margin-bottom:28px}
-.about p{margin-bottom:18px;max-width:640px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:44px 0;border-top:1px solid var(--line)}
-.stats div{padding:24px 16px 0 0}
-.stats div+div{padding-left:24px;border-left:1px solid var(--line)}
-.stats b{display:block;white-space:nowrap;font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.4vw,64px);line-height:1}
+.about{display:grid;grid-template-columns:.9fr 1.3fr;gap:12px}
+.me{display:flex;flex-direction:column;justify-content:space-between;gap:40px;background:var(--dark);color:#fff;border-color:var(--dark);min-height:420px}
+.avatar{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#2F3234,#18181A);border:1px solid var(--dline);font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:-.03em}
+.me h3{font-size:clamp(30px,3vw,44px);letter-spacing:-.045em;line-height:1.02}
+.me .who{color:var(--dmuted);font-size:15px;margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.stats div{background:var(--bg);border-radius:16px;padding:18px}
+.stats b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(28px,3vw,40px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
 .stats span{font-size:13px;color:var(--muted)}
-.case{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
-.case i{font-family:var(--serif);color:var(--copper);font-size:20px}
-.case b{font-family:var(--serif);font-weight:400;font-size:24px;display:block;margin-bottom:4px}
-.case p{color:var(--muted);font-size:15px;margin:0}
-.links{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px}
+.cases{margin-top:28px}
+.case{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.case b{font-weight:500;display:block}
+.case p{font-size:14px;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.links a{transition:background .3s,color .3s}
+.links a:hover{background:var(--ink);color:#fff}
 
 /* terms */
-.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
-.need{margin-top:clamp(56px,6vw,88px);display:grid;grid-template-columns:200px 1fr;gap:32px}
-.need ul{list-style:none;counter-reset:n}
-.need li{counter-increment:n;display:grid;grid-template-columns:52px 1fr;padding:18px 0;border-bottom:1px solid var(--line)}
-.need li::before{content:counter(n,decimal-leading-zero);font-family:var(--serif);font-style:italic;color:var(--copper)}
+.need{margin-top:12px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px}
+.need ul{list-style:none}
+.need li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink2)}
+.need li:last-child{border-bottom:0}
+.need li::before{content:"";width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line2);margin-top:1px}
 
 /* faq */
-.faq details{border-bottom:1px solid var(--line)}
-.faq details:first-child{border-top:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:30px 0;font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);font-weight:400;transition:color .4s}
+.faq{display:flex;flex-direction:column;gap:8px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:20px;transition:border-color .3s}
+.faq details[open]{border-color:var(--line2)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px;font-family:var(--display);font-weight:500;font-size:clamp(17px,1.5vw,20px);letter-spacing:-.015em}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:hover{color:var(--copper)}
-.faq summary i{position:relative;flex:none;width:18px;height:18px}
-.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:0;top:50%;width:18px;height:1px;background:var(--copper);transition:transform .6s var(--ease)}
+.faq summary i{flex:none;position:relative;width:32px;height:32px;border-radius:50%;background:var(--bg);transition:background .3s,transform .6s var(--ease)}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:10px;top:15.25px;width:12px;height:1.5px;border-radius:1px;background:var(--ink);transition:transform .6s var(--ease)}
 .faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i{transform:rotate(180deg);background:var(--ink)}
+.faq details[open] summary i::before,.faq details[open] summary i::after{background:#fff}
 .faq details[open] summary i::after{transform:rotate(0)}
 .faq .ans{overflow:hidden}
-.faq .ans p{padding:0 0 30px;color:var(--muted);max-width:860px}
+.faq .ans p{padding:0 24px 24px;color:var(--ink2);max-width:820px}
 
 /* cta */
-.cta{margin-top:clamp(96px,13vw,180px);border-top:1px solid var(--line);padding:clamp(72px,10vw,140px) 0 clamp(56px,6vw,80px)}
-.cta h2{font-size:clamp(52px,8.4vw,140px);line-height:.95}
-.cta-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end;margin-top:56px}
-.cta-grid>p{color:var(--muted);max-width:520px}
-.channels a{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:26px;transition:padding .6s var(--ease),color .4s}
-.channels a:first-child{border-top:1px solid var(--line)}
-.channels a span:last-child{font-family:var(--sans);font-size:13px;color:var(--muted);transition:transform .6s var(--ease),color .4s}
-.channels a:hover{padding-left:14px;color:var(--copper)}
-.channels a:hover span:last-child{transform:translateX(-6px);color:var(--copper)}
-footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:12px;color:var(--faint);letter-spacing:.08em}
+.cta{background:var(--dark);color:#fff;border-radius:calc(var(--r) + 8px);padding:clamp(36px,6vw,88px);position:relative;overflow:hidden;isolation:isolate}
+.cta .grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 80% 0%,#000 10%,transparent 65%);-webkit-mask-image:radial-gradient(ellipse at 80% 0%,#000 10%,transparent 65%)}
+.cta h2{font-size:clamp(38px,5.6vw,84px);letter-spacing:-.055em;line-height:.95;max-width:900px}
+.cta h2 span{color:var(--dmuted)}
+.cta-row{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:40px}
+.cta-row p{color:var(--dmuted);max-width:520px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:10px}
+.cta .btn.ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--dline)}
+.cta .btn.ghost .arr{background:rgba(255,255,255,.1)}
+footer{padding:40px 0 48px;font-size:13px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* responsive */
-@media (max-width:1080px){
+@media (max-width:1024px){
   nav{display:none}
-  .hero-bottom,.essence,.cta-grid,.about{grid-template-columns:1fr}
-  .hero-actions{justify-content:flex-start}
-  .shead,.need{grid-template-columns:1fr;gap:8px}
-  .num{padding-top:0}
-  .step{grid-template-columns:70px 1fr;gap:12px 20px}
-  .step>ul,.step>.step-out,.step>.brief{grid-column:2}
-  .prices,.terms{grid-template-columns:1fr}
+  .shead,.hero-row,.essence,.steps-wrap,.about,.need,.cta-row{grid-template-columns:1fr}
+  .shead p{justify-self:start}
+  .steps-side{position:static}
+  .counter{display:none}
+  .counter-name,.track{display:none}
+  .step{opacity:1}
+  .prices,.bento3,.marks{grid-template-columns:1fr}
   .deliv{grid-template-columns:repeat(2,1fr)}
-  .portrait{max-width:420px;aspect-ratio:1}
-}
-@media (max-width:720px){
-  body{font-size:16px}
-  .brand small{display:none}
-  .hero h1{font-size:44px}
   .facts{grid-template-columns:repeat(2,1fr)}
-  .fact,.fact+.fact{padding:28px 14px 20px 0;border-left:0}
-  .fact:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
-  .fact:nth-child(n+3){border-top:1px solid var(--line)}
-  .cols3,.marks{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .bar{margin:0 12px}
+  .hero h1{font-size:42px}
+  .showcase{aspect-ratio:4/3}
+  .fact{padding:20px}
   .deliv{grid-template-columns:1fr}
   .tl-head{display:none}
   .tl-row{grid-template-columns:1fr}
-  .tl-row .tl-bar{grid-column:1 !important;margin:0}
-  .swatches div{padding:8px;font-size:8px;letter-spacing:.06em}
-  .price{padding:36px 24px}
-  .stats div+div{padding-left:12px}
-  .hero::after,.orbit{width:90vw;height:90vw;right:-40vw}
-  .channels a{font-size:22px}
+  .tl-row .tl-bar{grid-column:1 !important}
+  .palette{grid-template-columns:repeat(5,1fr);gap:4px}
+  .palette div{padding:8px;font-size:9px;border-radius:10px}
+  .palette small{display:none}
+  .addons{padding:4px 22px}
+  .addon{flex-direction:column;gap:2px}
+  .price{padding:24px}
+  .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .stats div{padding:14px}
 }
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none !important;transition:none !important}
-  .js [data-reveal],.js .rule,.js .line>span,.js .marks .stage svg,.js .swatches div,.js .tl .tl-bar{opacity:1 !important;transform:none !important;filter:none !important;clip-path:none !important}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js [data-r],.js .split .w>span,.js .showcase .lock,.js .palette div,.js .tl .tl-bar{opacity:1 !important;transform:none !important;clip-path:none !important}
   html{scroll-behavior:auto}
 }
 </style>
 </head>
 <body>
-<div class="progress" aria-hidden="true"></div>
 
 <header>
-  <div class="wrap">
-    <a class="brand" href="#top">DEVENAS<small>Бренд-дизайн</small></a>
+  <div class="bar">
+    <a class="brand" href="#top">Devenas</a>
     <nav>
       <a href="#task">Задача</a><a href="#steps">Этапы</a><a href="#prices">Стоимость</a><a href="#result">Результат</a><a href="#about">Обо мне</a>
     </nav>
@@ -334,165 +307,145 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <main id="top">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="orbit" aria-hidden="true"></div>
+<div class="hero">
   <div class="wrap">
-    <div class="hero-top">
-      <span class="eyebrow">Коммерческое предложение · Стройкомфорт Стил</span>
-      <span class="eyebrow" style="color:var(--muted)">08.10.2026 — действует до 07.11.2026</span>
+    <div class="hero-meta" data-r>
+      <span class="label">Коммерческое предложение для «Стройкомфорт Стил»</span>
+      <span class="label" style="color:var(--muted)">Действует до 7 ноября 2026</span>
     </div>
-    <h1>
-      <span class="line"><span>Бренд, который</span></span>
-      <span class="line"><span>читается <em>на металле</em></span></span>
-      <span class="line"><span>и на бумаге</span></span>
-    </h1>
-    <div class="hero-bottom">
-      <p data-reveal style="--d:.5s">Логотип, фирменный стиль и носители для производителя морских контейнеров — чтобы с первого взгляда было понятно: вы производитель с 2004 года, а не перекупщик и не продавец бытовок.</p>
-      <div class="hero-actions" data-reveal style="--d:.65s">
-        <a class="link" href="#steps">Как будем работать</a>
-        <a class="btn solid" href="#prices">Смотреть стоимость <span class="arr">→</span></a>
+    <h1 class="split">Бренд, который читается на металле <span class="soft">и на бумаге</span></h1>
+    <div class="hero-row">
+      <p data-r style="--d:.35s">Логотип, фирменный стиль и носители для производителя морских контейнеров. Чтобы с первого взгляда было понятно: вы производитель с 2004 года, а не перекупщик и не продавец бытовок.</p>
+      <div class="hero-actions" data-r style="--d:.45s">
+        <a class="tlink" href="#steps">Как будем работать</a>
+        <a class="btn" href="#prices">Смотреть стоимость <span class="arr">→</span></a>
       </div>
     </div>
+    <div class="showcase" data-r style="--d:.2s">
+      <div class="grid-bg"></div>
+      <div class="lock">
+        <svg viewBox="0 0 200 160" aria-hidden="true"><path fill-rule="evenodd" fill="#fff" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg>
+        <div><b>СТРОЙКОМФОРТ</b><span>СТИЛ</span></div>
+      </div>
+      <span class="tag">Эскиз · направление A</span>
+      <span class="tag r">Графит ≈ RAL 7021</span>
+    </div>
     <div class="facts">
-      <div class="fact" data-reveal style="--d:.7s"><b data-count="5">5</b><span>недель от брифа до брендбука</span></div>
-      <div class="fact" data-reveal style="--d:.8s"><b data-count="3">3</b><span>направления знака на выбор</span></div>
-      <div class="fact" data-reveal style="--d:.9s"><b>0</b><span>обязательных созвонов: старт через подробный бриф</span></div>
-      <div class="fact" data-reveal style="--d:1s"><b data-count="100" data-suffix="%">100%</b><span>исключительных прав переходит вам</span></div>
+      <div class="fact" data-r><b data-count="5">5</b><span>недель от брифа до брендбука</span></div>
+      <div class="fact" data-r style="--d:.06s"><b data-count="3">3</b><span>направления знака на выбор</span></div>
+      <div class="fact" data-r style="--d:.12s"><b>0</b><span>обязательных созвонов — старт через подробный бриф</span></div>
+      <div class="fact" data-r style="--d:.18s"><b data-count="100" data-suffix="%">100%</b><span>исключительных прав переходит вам</span></div>
     </div>
   </div>
-  <div class="scroll-cue" aria-hidden="true"></div>
-</section>
+</div>
 
-<!-- I TASK -->
+<!-- TASK -->
 <section id="task">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>I.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Задача</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Лицо бренда — <em>контейнер</em></h2>
-        <p data-reveal style="--d:.2s">Я уже разобрала ваш запрос и собрала карту бренда. Проект начнётся не с чистого листа, а с понятного направления — это экономит время и бюджет.</p>
-      </div>
+      <div><span class="label" data-r>01 — Задача</span><h2 data-r style="--d:.05s">Лицо бренда — контейнер</h2></div>
+      <p data-r style="--d:.1s">Я уже разобрала ваш запрос и собрала карту бренда. Проект начнётся не с чистого листа, а с понятного направления — это экономит время и бюджет.</p>
     </div>
-    <div class="cols3">
-      <div class="point" data-reveal><span class="eyebrow">01</span><h3>Производитель, а не перекупщик</h3><p>Своё производство с 2004 года, площадки в Москве и Санкт-Петербурге. Стиль должен говорить о производстве и контроле.</p></div>
-      <div class="point" data-reveal style="--d:.12s"><span class="eyebrow">02</span><h3>Контейнер на первом плане, дом — следом</h3><p>Знак строим на образе контейнера. Дома под ключ показываем на сайте и в рекламе: контейнер умеем довести до жилья.</p></div>
-      <div class="point" data-reveal style="--d:.24s"><span class="eyebrow">03</span><h3>Стиль, который выдержит металл</h3><p>Знак в одну краску: на борту контейнеровоза, на торце контейнера и мелко в договоре. Без градиентов и тонких линий.</p></div>
+    <div class="bento3">
+      <div class="card hover" data-r><span class="idx">01</span><h3>Производитель, а не перекупщик</h3><p>Своё производство с 2004 года, площадки в Москве и Санкт-Петербурге. Стиль должен говорить о производстве и контроле.</p></div>
+      <div class="card hover" data-r style="--d:.06s"><span class="idx">02</span><h3>Сначала контейнер, потом дом</h3><p>Знак строим на образе контейнера. Дома под ключ показываем на сайте и в рекламе: контейнер умеем довести до жилья.</p></div>
+      <div class="card hover" data-r style="--d:.12s"><span class="idx">03</span><h3>Стиль, который выдержит металл</h3><p>Знак в одну краску: на борту контейнеровоза, на торце контейнера и мелко в договоре. Без градиентов и тонких линий.</p></div>
     </div>
-    <div class="essence">
-      <blockquote data-reveal>Сталь. Срок.<br><em>Своё производство.</em></blockquote>
-      <p data-reveal style="--d:.15s">Суть бренда в трёх словах. «Стил» в названии отвечает за сталь и производство, «комфорт» объясняет, почему у поставщика контейнеров есть жилые модули. Графит, тёмная сталь и один тёплый акцент — медь, чтобы уйти и от портового синего, и от оранжевого строймаркета.</p>
+    <div class="essence" data-r>
+      <h3>Сталь. Срок.<br><span>Своё производство.</span></h3>
+      <p>Суть бренда в трёх словах. «Стил» в названии отвечает за сталь и производство, «комфорт» объясняет, почему у поставщика контейнеров есть жилые модули. Графит, тёмная сталь и один тёплый акцент — медь: подальше и от портового синего, и от оранжевого строймаркета.</p>
     </div>
   </div>
 </section>
 
-<!-- II SKETCHES (paper) -->
-<section class="paper" id="sketches">
+<!-- SKETCHES -->
+<section id="sketches">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal style="color:var(--copper-deep)">II.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Первые эскизы</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Три идеи знака <em>уже есть</em></h2>
-        <p data-reveal style="--d:.2s">Это наброски из карты бренда, чтобы вы видели, куда мы пойдём. На этапе логотипа каждое направление будет проработано, проверено на носителях и доведено до финала.</p>
-      </div>
+      <div><span class="label" data-r>02 — Первые эскизы</span><h2 data-r style="--d:.05s">Три идеи знака уже есть</h2></div>
+      <p data-r style="--d:.1s">Это наброски из карты бренда, чтобы вы видели, куда мы пойдём. На этапе логотипа каждое направление будет проработано и проверено на носителях.</p>
     </div>
     <div class="marks">
-      <div class="markcard">
+      <div class="card mark hover" data-r>
         <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление A: торец контейнера"><path class="g" fill-rule="evenodd" fill="#2F3234" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg></div>
-        <div class="meta"><b>A · Торец</b><span class="pill">Рекомендую</span></div>
-        <p class="muted">Двустворчатый торец с запорными штангами — самый узнаваемый «контейнерный» образ. Работает от 10 мм до борта.</p>
+        <div class="body"><div class="top"><h3>A · Торец</h3><span class="badge">Рекомендую</span></div><p>Двустворчатый торец с запорными штангами — самый узнаваемый образ. Работает от 10 мм до борта.</p></div>
       </div>
-      <div class="markcard">
+      <div class="card mark hover" data-r style="--d:.06s">
         <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление B: объём контейнера"><path class="g" fill="#2F3234" d="M0 40L40 0H200L160 40Z"/><path class="g" fill="#2F3234" d="M0 48H152V160H0Z"/><path class="g" fill="#2F3234" d="M160 48L200 8V120L160 160Z"/></svg></div>
-        <div class="meta"><b>B · Объём</b></div>
-        <p class="muted">Характерный параллелепипед из трёх граней. Читается как модуль и склад одновременно.</p>
+        <div class="body"><div class="top"><h3>B · Объём</h3></div><p>Характерный параллелепипед из трёх граней. Читается как модуль и склад одновременно.</p></div>
       </div>
-      <div class="markcard">
-        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление C: торец с тёплым проёмом"><path class="g" fill-rule="evenodd" fill="#2F3234" d="M0 0H200V160H0Z M112 28H172V88H112Z"/><path fill="#A35A38" d="M120 36H164V80H120Z"/></svg></div>
-        <div class="meta"><b>C · Торец и проём</b></div>
-        <p class="muted">Торец с тёплым окном — мост к линейке домов. В одну краску окно становится вырезом.</p>
+      <div class="card mark hover" data-r style="--d:.12s">
+        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление C: торец с тёплым проёмом"><path class="g" fill-rule="evenodd" fill="#2F3234" d="M0 0H200V160H0Z M112 28H172V88H112Z"/><path fill="#B5653A" d="M120 36H164V80H120Z"/></svg></div>
+        <div class="body"><div class="top"><h3>C · Торец и проём</h3></div><p>Торец с тёплым окном — мост к линейке домов. В одну краску окно становится вырезом.</p></div>
       </div>
     </div>
-    <div class="lockup" data-reveal>
-      <svg viewBox="0 0 200 160" width="92" aria-hidden="true"><path fill-rule="evenodd" fill="#fff" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg>
-      <div class="wm"><b>СТРОЙКОМФОРТ</b><span>СТИЛ</span></div>
+    <div class="palette" aria-label="Предварительная палитра">
+      <div style="background:#2F3234;color:#fff">Графит<small>≈ RAL 7021</small></div>
+      <div style="background:#3F454A;color:#fff">Тёмная сталь<small>≈ RAL 7016</small></div>
+      <div style="background:#7D8185;color:#fff">Сталь<small>≈ RAL 7037</small></div>
+      <div style="background:#fff;color:var(--ink);border:1px solid var(--line)">Бумага<small>≈ RAL 9002</small></div>
+      <div style="background:#A35A38;color:#fff">Медь<small>≈ RAL 8004</small></div>
     </div>
-    <div class="swatches" aria-label="Предварительная палитра">
-      <div style="background:#2F3234;color:#fff">Графит<br>≈ RAL 7021</div>
-      <div style="background:#3F454A;color:#fff">Тёмная сталь<br>≈ RAL 7016</div>
-      <div style="background:#7D8185;color:#fff">Сталь<br>≈ RAL 7037</div>
-      <div style="background:#F6F2EB;color:#171614;border:1px solid var(--paper-line)">Бумага<br>≈ RAL 9002</div>
-      <div style="background:#A35A38;color:#fff">Медь<br>≈ RAL 8004</div>
-    </div>
-    <p class="note">Наведите на эскиз, чтобы увидеть знак на тёмном металле.</p>
+    <p class="hint">Наведите на эскиз, чтобы увидеть знак на тёмном металле.</p>
   </div>
 </section>
 
-<!-- III STEPS -->
+<!-- STEPS -->
 <section id="steps">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>III.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Как я работаю</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Десять шагов — <em>без лишних встреч</em></h2>
-        <p data-reveal style="--d:.2s">Вся информация собирается через подробный бриф, остальное — в переписке в удобное для вас время. Каждый этап заканчивается вашим утверждением, и только после него я перехожу к следующему.</p>
-      </div>
+      <div><span class="label" data-r>03 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
+      <p data-r style="--d:.1s">Всю информацию собираем через подробный бриф, остальное — в переписке, когда вам удобно. Каждый этап заканчивается вашим утверждением.</p>
     </div>
-    <div class="steps">
-      <div class="step key" data-reveal>
-        <span class="step-n">01</span>
-        <h3>Подробный бриф</h3>
-        <div class="brief">
-          <ul>
-            <li>Онлайн-анкета из 40 вопросов вместо созвона: заполняете за 40–60 минут, когда удобно</li>
-            <li>Можно отвечать по частям и подключить менеджера по продажам</li>
-            <li>Если что-то неясно, уточню в переписке</li>
-          </ul>
-          <div class="brief-topics"><span>Компания и производство</span><span>Продукты и цены</span><span>Клиенты</span><span>Конкуренты</span><span>Носители и размеры</span><span>Что нравится и что нет</span></div>
+    <div class="steps-wrap">
+      <aside class="steps-side">
+        <div class="counter"><span id="cnt">01</span><small>/ 10</small></div>
+        <div class="counter-name" id="cnt-name">Подробный бриф</div>
+        <div class="track"><i id="cnt-bar"></i></div>
+        <p>Следующий шаг начинаю только после вашего «да» — вы всегда знаете, что происходит и что получите на выходе.</p>
+      </aside>
+      <div class="steps">
+        <div class="card step key" data-r data-name="Подробный бриф">
+          <span class="idx">01</span><h3>Подробный бриф вместо созвона</h3>
+          <ul><li>Онлайн-анкета из 40 вопросов — 40–60 минут, когда удобно</li><li>Можно отвечать частями и подключить менеджера по продажам</li><li>Если что-то неясно, уточню в переписке</li></ul>
+          <div class="chips"><span class="chip">Компания и производство</span><span class="chip">Продукты и цены</span><span class="chip">Клиенты</span><span class="chip">Конкуренты</span><span class="chip">Носители и размеры</span><span class="chip">Что нравится и что нет</span></div>
+          <span class="out">Результат: заполненный бриф</span>
         </div>
-        <span class="step-out">→ Заполненный бриф</span>
+        <div class="card step" data-r data-name="Договор и старт"><span class="idx">02</span><h3>Договор и старт</h3><ul><li>Фиксируем пакет, сроки и стоимость</li><li>Работаю официально как самозанятая: договор и чеки</li><li>Предоплата 50%</li></ul><span class="out">Результат: договор и график</span></div>
+        <div class="card step" data-r data-name="Исследование"><span class="idx">03</span><h3>Исследование</h3><ul><li>Анализ 8–10 конкурентов: перекупщики, продавцы бытовок, модульные дома</li><li>Две аудитории: покупатели и арендаторы контейнеров, заказчики домов</li></ul><span class="out">Результат: карта конкурентов</span></div>
+        <div class="card step" data-r data-name="Платформа бренда"><span class="idx">04</span><h3>Платформа бренда</h3><ul><li>Суть, позиционирование, аргументы «почему мы»</li><li>Характер и тон: как бренд говорит в объявлениях и КП</li></ul><span class="out">Результат: карта бренда</span></div>
+        <div class="card step" data-r data-name="Мудборд"><span class="idx">05</span><h3>Мудборд</h3><ul><li>Настроение, фактуры, цвет, шрифты, референсы</li><li>Сразу проверяем, как это смотрится на металле и на бумаге</li></ul><span class="out">Результат: утверждённое настроение</span></div>
+        <div class="card step" data-r data-name="Концепции знака"><span class="idx">06</span><h3>Концепции знака</h3><ul><li>Три направления логотипа, каждое — на борту, торце контейнера и бланке</li><li>Вы выбираете одно для доработки</li></ul><span class="out">Результат: выбранное направление</span></div>
+        <div class="card step" data-r data-name="Доработка логотипа"><span class="idx">07</span><h3>Доработка логотипа</h3><ul><li>Связка «Стройкомфорт» и «Стил»: пропорции, разрядка, выравнивание</li><li>Версии: горизонтальная, вертикальная, знак отдельно, в одну краску</li><li>Проверка от 10 мм до нескольких метров</li></ul><span class="out">Результат: утверждённый логотип</span></div>
+        <div class="card step" data-r data-name="Фирменный стиль"><span class="idx">08</span><h3>Фирменный стиль</h3><ul><li>Цвета с кодами RAL, CMYK, Pantone и RGB</li><li>Шрифты с кириллицей, графические элементы, стиль фото и иконок</li></ul><span class="out">Результат: система стиля</span></div>
+        <div class="card step" data-r data-name="Носители"><span class="idx">09</span><h3>Носители</h3><ul><li>Маркировка контейнера, борт контейнеровоза, документы, объявления — по составу пакета</li><li>Макеты с размерами, готовые для печати и покраски</li></ul><span class="out">Результат: макеты для производства</span></div>
+        <div class="card step" data-r data-name="Брендбук и передача"><span class="idx">10</span><h3>Брендбук и передача</h3><ul><li>Правила, понятные печатнику, маляру и веб-студии</li><li>Передача исходников и договор об отчуждении прав</li><li>2 недели бесплатной поддержки: отвечаю подрядчикам, проверяю первые выпуски</li></ul><span class="out">Результат: брендбук и все файлы</span></div>
       </div>
-      <div class="step" data-reveal><span class="step-n">02</span><h3>Договор и старт</h3><ul><li>Фиксируем пакет, сроки и стоимость</li><li>Работаю официально как самозанятая: договор и чеки</li><li>Предоплата 50%</li></ul><span class="step-out">→ Договор и график</span></div>
-      <div class="step" data-reveal><span class="step-n">03</span><h3>Исследование</h3><ul><li>Анализ 8–10 конкурентов: перекупщики, продавцы бытовок, модульные дома</li><li>Две аудитории: покупатели и арендаторы контейнеров, заказчики домов</li></ul><span class="step-out">→ Карта конкурентов</span></div>
-      <div class="step" data-reveal><span class="step-n">04</span><h3>Платформа бренда</h3><ul><li>Суть, позиционирование, аргументы «почему мы»</li><li>Характер и тон: как бренд говорит в объявлениях и КП</li></ul><span class="step-out">→ Карта бренда</span></div>
-      <div class="step" data-reveal><span class="step-n">05</span><h3>Мудборд</h3><ul><li>Настроение, фактуры, цвет, шрифты, референсы</li><li>Сразу проверяем, как это смотрится на металле и на бумаге</li></ul><span class="step-out">→ Утверждённое настроение</span></div>
-      <div class="step" data-reveal><span class="step-n">06</span><h3>Концепции знака</h3><ul><li>Три направления логотипа, каждое — на борту, торце контейнера и бланке</li><li>Вы выбираете одно для доработки</li></ul><span class="step-out">→ Выбранное направление</span></div>
-      <div class="step" data-reveal><span class="step-n">07</span><h3>Доработка логотипа</h3><ul><li>Связка «Стройкомфорт» и «Стил»: пропорции, разрядка, выравнивание</li><li>Версии: горизонтальная, вертикальная, знак отдельно, в одну краску</li><li>Проверка от 10 мм до нескольких метров</li></ul><span class="step-out">→ Утверждённый логотип</span></div>
-      <div class="step" data-reveal><span class="step-n">08</span><h3>Фирменный стиль</h3><ul><li>Цвета с кодами RAL, CMYK, Pantone и RGB</li><li>Шрифты с кириллицей, графические элементы, стиль фото и иконок</li></ul><span class="step-out">→ Система стиля</span></div>
-      <div class="step" data-reveal><span class="step-n">09</span><h3>Носители</h3><ul><li>Маркировка контейнера, борт контейнеровоза, документы, объявления — по составу пакета</li><li>Макеты с размерами, готовые для печати и покраски</li></ul><span class="step-out">→ Макеты для производства</span></div>
-      <div class="step" data-reveal><span class="step-n">10</span><h3>Брендбук и передача</h3><ul><li>Правила, понятные печатнику, маляру и веб-студии</li><li>Передача исходников и договор об отчуждении прав</li><li>2 недели бесплатной поддержки: отвечаю подрядчикам, проверяю первые выпуски</li></ul><span class="step-out">→ Брендбук и все файлы</span></div>
     </div>
 
-    <div class="tl" aria-label="График пакета «Фирменный стиль»">
+    <div class="card tl" aria-label="График пакета «Фирменный стиль»">
       <div class="tl-head"><div>Неделя 1</div><div>Неделя 2</div><div>Неделя 3</div><div>Неделя 4</div><div>Неделя 5</div></div>
       <div class="tl-row"><div class="tl-bar" style="grid-column:1/2"><b>Бриф и платформа</b>этапы 01–04</div></div>
       <div class="tl-row"><div class="tl-bar key" style="grid-column:2/4"><b>Мудборд и логотип</b>этапы 05–07</div></div>
       <div class="tl-row"><div class="tl-bar" style="grid-column:4/5"><b>Стиль и носители</b>этапы 08–09</div></div>
       <div class="tl-row"><div class="tl-bar" style="grid-column:5/6"><b>Брендбук</b>этап 10</div></div>
+      <div class="gates"><span class="chip">Неделя 1 — платформа утверждена</span><span class="chip">Неделя 3 — логотип утверждён</span><span class="chip">Неделя 5 — приёмка и передача прав</span></div>
     </div>
-    <div class="gates" data-reveal><span>Конец 1-й недели — платформа утверждена</span><span>Конец 3-й недели — логотип утверждён</span><span>5-я неделя — приёмка и передача прав</span></div>
-    <p class="note" data-reveal>График для пакета «Фирменный стиль». «Логотип» займёт 2 недели, «Бренд под ключ» — 7 недель.</p>
+    <p class="foot">График для пакета «Фирменный стиль». «Логотип» займёт 2 недели, «Бренд под ключ» — 7 недель.</p>
   </div>
 </section>
 
-<!-- IV PRICES (paper) -->
-<section class="paper" id="prices">
+<!-- PRICES -->
+<section id="prices">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal style="color:var(--copper-deep)">IV.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Стоимость</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Три формата, <em>честная цена</em></h2>
-        <p data-reveal style="--d:.2s">Сумма фиксируется в договоре и не меняется в ходе работы. Бриф без созвонов и готовая карта бренда позволили снизить стоимость без потери качества.</p>
-      </div>
+      <div><span class="label" data-r>04 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
+      <p data-r style="--d:.1s">Сумма фиксируется в договоре и не меняется в ходе работы. Бриф без созвонов и готовая карта бренда позволили снизить стоимость без потери качества.</p>
     </div>
     <div class="prices">
-      <div class="price" data-reveal>
-        <span class="eyebrow">Старт</span>
-        <h3>Логотип</h3>
-        <span class="term">2 недели</span>
+      <div class="card price hover" data-r>
+        <div class="ph"><span class="label">Старт</span></div>
+        <h3>Логотип</h3><span class="term">2 недели</span>
         <div class="amount" data-price="30000">30 000<small>₽</small></div>
         <ul>
           <li>Подробный бриф и анализ конкурентов</li>
@@ -503,13 +456,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>Визитка</li>
           <li>Мини-гайд на 5–6 страниц</li>
         </ul>
-        <a class="btn" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить <span class="arr">→</span></a>
+        <a class="btn light" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить <span class="arr">→</span></a>
       </div>
-      <div class="price key" data-reveal style="--d:.12s">
-        <span class="ribbon-flag"><i></i>Рекомендую</span>
-        <span class="eyebrow">Оптимальный</span>
-        <h3>Фирменный стиль</h3>
-        <span class="term">5 недель</span>
+      <div class="card price key hover" data-r style="--d:.06s">
+        <div class="ph"><span class="label" style="color:rgba(255,255,255,.75)">Оптимальный</span><span class="badge">Рекомендую</span></div>
+        <h3>Фирменный стиль</h3><span class="term">5 недель</span>
         <div class="amount" data-price="70000">70 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Логотип»</li>
@@ -522,12 +473,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>3 шаблона объявлений и соцсетей</li>
           <li>Брендбук на 20 страниц</li>
         </ul>
-        <a class="btn" href="https://t.me/devenas" target="_blank" rel="noopener">Выбрать <span class="arr">→</span></a>
+        <a class="btn white" href="https://t.me/devenas" target="_blank" rel="noopener">Выбрать этот пакет <span class="arr">→</span></a>
       </div>
-      <div class="price" data-reveal style="--d:.24s">
-        <span class="eyebrow">Максимум</span>
-        <h3>Бренд под ключ</h3>
-        <span class="term">7 недель</span>
+      <div class="card price hover" data-r style="--d:.12s">
+        <div class="ph"><span class="label">Максимум</span></div>
+        <h3>Бренд под ключ</h3><span class="term">7 недель</span>
         <div class="amount" data-price="120000">120 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Фирменный стиль»</li>
@@ -540,116 +490,108 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>Брендбук на 35 страниц</li>
           <li>Месяц сопровождения подрядчиков</li>
         </ul>
-        <a class="btn" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить <span class="arr">→</span></a>
+        <a class="btn light" href="https://t.me/devenas" target="_blank" rel="noopener">Обсудить <span class="arr">→</span></a>
       </div>
     </div>
-
-    <div class="addons">
-      <div class="rule"></div>
-      <div class="addon" data-reveal><span>Дополнительный носитель сверх пакета</span><b>от 3 000 ₽</b></div>
-      <div class="addon" data-reveal><span>Раскладка брендирования машины, 3 стороны</span><b>от 10 000 ₽</b></div>
-      <div class="addon" data-reveal><span>Дополнительный круг правок</span><b>5 000 ₽</b></div>
-      <div class="addon" data-reveal><span>Одностраничный сайт в новом стиле</span><b>55 000 ₽</b></div>
-      <div class="addon" data-reveal><span>Многостраничный сайт с каталогом контейнеров и домов</span><b>от 80 000 ₽</b></div>
+    <div class="card addons" data-r>
+      <div class="addon"><span>Дополнительный носитель сверх пакета</span><b>от 3 000 ₽</b></div>
+      <div class="addon"><span>Раскладка брендирования машины, 3 стороны</span><b>от 10 000 ₽</b></div>
+      <div class="addon"><span>Дополнительный круг правок</span><b>5 000 ₽</b></div>
+      <div class="addon"><span>Одностраничный сайт в новом стиле</span><b>55 000 ₽</b></div>
+      <div class="addon"><span>Многостраничный сайт с каталогом контейнеров и домов</span><b>от 80 000 ₽</b></div>
     </div>
-    <p class="note" data-reveal>Не входит в стоимость: печать и покраска, фото- и видеосъёмка, пошлины Роспатента за регистрацию товарного знака.</p>
+    <p class="foot">Не входит в стоимость: печать и покраска, фото- и видеосъёмка, пошлины Роспатента за регистрацию товарного знака.</p>
   </div>
 </section>
 
-<!-- V RESULT -->
+<!-- RESULT -->
 <section id="result">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>V.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Результат</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Файлы, которые можно <em>сразу отдать</em> в работу</h2>
-        <p data-reveal style="--d:.2s">Печатник, маляр, производитель вывесок или веб-студия получат всё необходимое — без звонков дизайнеру.</p>
-      </div>
+      <div><span class="label" data-r>05 — Результат</span><h2 data-r style="--d:.05s">Файлы, готовые к работе</h2></div>
+      <p data-r style="--d:.1s">Печатник, маляр, производитель вывесок или веб-студия получат всё необходимое — без звонков дизайнеру.</p>
     </div>
     <div class="deliv">
-      <div data-reveal><span class="eyebrow">01</span><h3>Логотип и знак</h3><p>Все версии: цветная, одноцветная, на тёмном и светлом фоне.</p><small>AI · PDF · SVG · PNG</small></div>
-      <div data-reveal style="--d:.08s"><span class="eyebrow">02</span><h3>Трафарет</h3><p>Знак и маркировка для покраски контейнеров и бортов в натуральную величину.</p><small>DXF · PDF 1:1</small></div>
-      <div data-reveal style="--d:.16s"><span class="eyebrow">03</span><h3>Макеты носителей</h3><p>С размерами и вылетами, готовые для типографии и производства.</p><small>PDF · исходники</small></div>
-      <div data-reveal style="--d:.24s"><span class="eyebrow">04</span><h3>Шаблоны документов</h3><p>Бланк, КП и договор — офис заполняет сам, без дизайнера.</p><small>DOCX</small></div>
-      <div data-reveal><span class="eyebrow">05</span><h3>Шаблоны объявлений</h3><p>Для Авито и соцсетей: поменяли фото и цену — и публикуете.</p><small>Figma</small></div>
-      <div data-reveal style="--d:.08s"><span class="eyebrow">06</span><h3>Брендбук</h3><p>Правила стиля: что можно, что нельзя, примеры на всех носителях.</p><small>PDF · Figma</small></div>
-      <div data-reveal style="--d:.16s"><span class="eyebrow">07</span><h3>Цвет и шрифты</h3><p>Палитра с кодами для краски и печати, ссылки на бесплатные шрифты.</p><small>RAL · CMYK · Pantone</small></div>
-      <div data-reveal style="--d:.24s"><span class="eyebrow">08</span><h3>Права</h3><p>Исключительные права на логотип и стиль — основа для регистрации товарного знака.</p><small>Договор об отчуждении</small></div>
+      <div class="card hover" data-r><span class="idx">01</span><h3>Логотип и знак</h3><p>Все версии: цветная, одноцветная, на тёмном и светлом фоне.</p><div class="fmt"><span class="chip">AI</span><span class="chip">PDF</span><span class="chip">SVG</span><span class="chip">PNG</span></div></div>
+      <div class="card hover" data-r style="--d:.05s"><span class="idx">02</span><h3>Трафарет</h3><p>Знак и маркировка для покраски контейнеров и бортов в натуральную величину.</p><div class="fmt"><span class="chip">DXF</span><span class="chip">PDF 1:1</span></div></div>
+      <div class="card hover" data-r style="--d:.1s"><span class="idx">03</span><h3>Макеты носителей</h3><p>С размерами и вылетами, готовые для типографии и производства.</p><div class="fmt"><span class="chip">PDF</span><span class="chip">Исходники</span></div></div>
+      <div class="card hover" data-r style="--d:.15s"><span class="idx">04</span><h3>Шаблоны документов</h3><p>Бланк, КП и договор — офис заполняет сам, без дизайнера.</p><div class="fmt"><span class="chip">DOCX</span></div></div>
+      <div class="card hover" data-r><span class="idx">05</span><h3>Шаблоны объявлений</h3><p>Для Авито и соцсетей: поменяли фото и цену — и публикуете.</p><div class="fmt"><span class="chip">Figma</span></div></div>
+      <div class="card hover" data-r style="--d:.05s"><span class="idx">06</span><h3>Брендбук</h3><p>Правила стиля: что можно, что нельзя, примеры на всех носителях.</p><div class="fmt"><span class="chip">PDF</span><span class="chip">Figma</span></div></div>
+      <div class="card hover" data-r style="--d:.1s"><span class="idx">07</span><h3>Цвет и шрифты</h3><p>Палитра с кодами для краски и печати, ссылки на бесплатные шрифты.</p><div class="fmt"><span class="chip">RAL</span><span class="chip">CMYK</span><span class="chip">Pantone</span></div></div>
+      <div class="card hover" data-r style="--d:.15s"><span class="idx">08</span><h3>Права</h3><p>Исключительные права на логотип и стиль — основа для регистрации товарного знака.</p><div class="fmt"><span class="chip">Договор об отчуждении</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- VI ABOUT -->
+<!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>VI.</span>
-      <div><span class="eyebrow" data-reveal>Обо мне</span></div>
+      <div><span class="label" data-r>06 — Обо мне</span><h2 data-r style="--d:.05s">Кто будет делать ваш бренд</h2></div>
     </div>
     <div class="about">
-      <div class="portrait" data-reveal><b>А<em>.</em>Д</b><span><span>Анастасия Девентейчик</span><span>DEVENAS</span></span></div>
-      <div>
-        <h3 data-reveal>Дизайнер с <em>экономическим</em> мышлением</h3>
-        <p data-reveal style="--d:.1s">Я Анастасия, веб- и бренд-дизайнер. По образованию — экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него.</p>
-        <p class="muted" data-reveal style="--d:.15s">Работаю официально как самозанятая: договор и чеки. Tilda Expert. Веду проект сама от брифа до передачи файлов — вы всегда общаетесь с тем, кто делает работу.</p>
-        <div class="stats" data-reveal style="--d:.2s">
+      <div class="card me" data-r>
+        <div class="avatar">АД</div>
+        <div>
+          <h3>Анастасия Девентейчик</h3>
+          <p class="who">Веб- и бренд-дизайнер · DEVENAS<br>Самозанятая · Tilda Expert</p>
+        </div>
+      </div>
+      <div class="card" data-r style="--d:.08s">
+        <h3 style="font-size:clamp(24px,2.4vw,32px);letter-spacing:-.035em">Дизайнер с экономическим мышлением</h3>
+        <p style="color:var(--ink2);font-size:16px;margin-top:14px">По образованию я экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него. Веду проект сама от брифа до передачи файлов — вы всегда общаетесь с тем, кто делает работу. Работаю официально: договор и чеки.</p>
+        <div class="stats">
           <div><b data-count="3" data-suffix="+">3+</b><span>года в дизайне</span></div>
           <div><b data-count="10" data-suffix="+">10+</b><span>проектов для бизнеса</span></div>
           <div><b>RU/EN</b><span>языки проектов</span></div>
         </div>
-        <div class="case" data-reveal><i>01</i><div><b>Центр интимной эстетики</b><p>Логотип в 2024 году, затем сайт на Tilda, сейчас — платформа в коде. Клиент вернулся после логотипа и работает со мной с 2024 года.</p></div></div>
-        <div class="case" data-reveal><i>02</i><div><b>PerfectMatch</b><p>HR-консалтинг для крупного бизнеса: логотип в трёх вариантах, мини-гайдлайн и двуязычный сайт.</p></div></div>
-        <div class="case" data-reveal style="border-bottom:1px solid var(--line)"><i>03</i><div><b>NTGUILTY, EURASIA, МЯСО &amp; БУЛКА и другие</b><p>Сайты для адвокатов, магазина профкосметики, бургерной, туров и тренера.</p></div></div>
-        <div class="links" data-reveal>
-          <a class="link" href="https://www.behance.net/3649e2cc" target="_blank" rel="noopener">Behance ↗</a>
-          <a class="link" href="https://dprofile.ru/devenas" target="_blank" rel="noopener">Dprofile ↗</a>
-          <a class="link" href="https://experts.tilda.ru/devenas" target="_blank" rel="noopener">Tilda Experts ↗</a>
+        <div class="cases">
+          <div class="case"><div><b>Центр интимной эстетики</b><p>Логотип в 2024 году, затем сайт на Tilda, сейчас — платформа в коде. Клиент со мной с 2024 года.</p></div><span class="chip">Логотип → платформа</span></div>
+          <div class="case"><div><b>PerfectMatch</b><p>HR-консалтинг для крупного бизнеса: логотип в трёх вариантах, мини-гайдлайн и двуязычный сайт.</p></div><span class="chip">Логотип + сайт</span></div>
+          <div class="case"><div><b>NTGUILTY, EURASIA, МЯСО &amp; БУЛКА и другие</b><p>Сайты для адвокатов, магазина профкосметики, бургерной, туров и тренера.</p></div><span class="chip">Сайты</span></div>
+        </div>
+        <div class="links">
+          <a class="chip" href="https://www.behance.net/3649e2cc" target="_blank" rel="noopener">Behance ↗</a>
+          <a class="chip" href="https://dprofile.ru/devenas" target="_blank" rel="noopener">Dprofile ↗</a>
+          <a class="chip" href="https://experts.tilda.ru/devenas" target="_blank" rel="noopener">Tilda Experts ↗</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VII TERMS -->
+<!-- TERMS -->
 <section id="terms">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>VII.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Условия</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Как <em>договоримся</em></h2>
-      </div>
+      <div><span class="label" data-r>07 — Условия</span><h2 data-r style="--d:.05s">Как договоримся</h2></div>
     </div>
-    <div class="terms">
-      <div class="point" data-reveal><span class="eyebrow">01</span><h3>Оплата 50 / 50</h3><p>50% — предоплата перед стартом, 50% — после утверждения логотипа, до передачи исходников.</p></div>
-      <div class="point" data-reveal style="--d:.12s"><span class="eyebrow">02</span><h3>Два круга правок на этап</h3><p>Входят в стоимость. Возврат к уже утверждённому этапу — дополнительный круг за 5 000 ₽.</p></div>
-      <div class="point" data-reveal style="--d:.24s"><span class="eyebrow">03</span><h3>Права переходят вам</h3><p>Исключительные права — по договору об отчуждении после полной оплаты. Этого достаточно для регистрации товарного знака.</p></div>
+    <div class="bento3">
+      <div class="card hover" data-r><span class="idx">50/50</span><h3>Оплата в два этапа</h3><p>50% — предоплата перед стартом, 50% — после утверждения логотипа, до передачи исходников.</p></div>
+      <div class="card hover" data-r style="--d:.06s"><span class="idx">2×</span><h3>Два круга правок на этап</h3><p>Входят в стоимость. Возврат к уже утверждённому этапу — дополнительный круг за 5 000 ₽.</p></div>
+      <div class="card hover" data-r style="--d:.12s"><span class="idx">100%</span><h3>Права переходят вам</h3><p>Исключительные права — по договору об отчуждении после полной оплаты. Этого достаточно для регистрации товарного знака.</p></div>
     </div>
-    <div class="need">
-      <span class="eyebrow" data-reveal style="padding-top:18px">Что нужно от вас</span>
+    <div class="card need" data-r>
+      <div><h3>Что нужно от вас</h3><p class="muted" style="margin-top:8px;font-size:15px">Немного — и всё можно сделать в удобное время.</p></div>
       <ul>
-        <li data-reveal>Заполненный бриф — 40–60 минут в удобное время</li>
-        <li data-reveal>Один человек, который принимает решения по проекту</li>
-        <li data-reveal>Фото площадок, контейнеров, техники и готовых домов</li>
-        <li data-reveal>Размеры бортов машин и места под вывеску</li>
-        <li data-reveal>Ответы на материалы в течение 2 рабочих дней — так сроки не сдвигаются</li>
+        <li>Заполненный бриф — 40–60 минут в удобное время</li>
+        <li>Один человек, который принимает решения по проекту</li>
+        <li>Фото площадок, контейнеров, техники и готовых домов</li>
+        <li>Размеры бортов машин и места под вывеску</li>
+        <li>Ответы на материалы в течение 2 рабочих дней — так сроки не сдвигаются</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- VIII FAQ -->
+<!-- FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="shead">
-      <span class="num" data-reveal>VIII.</span>
-      <div>
-        <span class="eyebrow" data-reveal>Вопросы</span>
-        <h2 data-reveal style="--d:.1s;margin-top:18px">Коротко <em>о важном</em></h2>
-      </div>
+      <div><span class="label" data-r>08 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
     </div>
-    <div class="faq" data-reveal>
+    <div class="faq" data-r>
       <details><summary>Обязательно ли созваниваться?<i></i></summary><div class="ans"><p>Нет. Всё, что мне нужно, вы расскажете в подробном брифе, а вопросы по ходу работы решаем в переписке. Если захотите обсудить что-то голосом — тоже можно.</p></div></details>
       <details><summary>А если ни одно направление знака не понравится?<i></i></summary><div class="ans"><p>Перед эскизами мы утверждаем платформу и мудборд, поэтому промахнуться сложно. Если всё же ни одно направление не подойдёт, сделаю ещё одно в рамках правок этапа.</p></div></details>
       <details><summary>Почему в знаке не будет дома, если вы строите дома?<i></i></summary><div class="ans"><p>Основной спрос — контейнеры: их покупают и арендуют каждый день. Дом в знаке превратит вас в домостроительную компанию и отпугнёт основной поток клиентов. Дома мы покажем на сайте и в рекламе.</p></div></details>
@@ -660,17 +602,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 
 <!-- CTA -->
-<section class="cta" id="contact">
+<section id="contact">
   <div class="wrap">
-    <span class="eyebrow" data-reveal>Следующий шаг</span>
-    <h2 data-reveal style="--d:.1s;margin-top:24px">Начнём <em>с брифа?</em></h2>
-    <div class="cta-grid">
-      <p data-reveal style="--d:.2s">Напишите, какой формат вам ближе, — в течение дня пришлю ссылку на бриф, договор и счёт. Старт в течение недели после предоплаты. Предложение действует до 7 ноября 2026 года.</p>
-      <div class="channels" data-reveal style="--d:.3s">
-        <a href="https://t.me/devenas" target="_blank" rel="noopener"><span>Telegram</span><span>@devenas →</span></a>
-        <a href="https://vk.com/devenas.design" target="_blank" rel="noopener"><span>ВКонтакте</span><span>devenas.design →</span></a>
-        <a href="https://www.behance.net/3649e2cc" target="_blank" rel="noopener"><span>Behance</span><span>портфолио →</span></a>
-        <p class="note">Отвечаю в будни с 08:00 до 19:00</p>
+    <div class="cta" data-r>
+      <div class="grid-bg"></div>
+      <span class="label" style="color:rgba(255,255,255,.75)">Следующий шаг</span>
+      <h2 style="margin-top:20px">Начнём с брифа? <span>Это 40 минут вашего времени.</span></h2>
+      <div class="cta-row">
+        <p>Напишите, какой формат вам ближе, — в течение дня пришлю ссылку на бриф, договор и счёт. Старт в течение недели после предоплаты. Предложение действует до 7 ноября 2026 года. Отвечаю в будни с 08:00 до 19:00.</p>
+        <div class="cta-btns">
+          <a class="btn white" href="https://t.me/devenas" target="_blank" rel="noopener">Telegram <span class="arr">→</span></a>
+          <a class="btn ghost" href="https://vk.com/devenas.design" target="_blank" rel="noopener">ВКонтакте <span class="arr">→</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -678,7 +621,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </main>
 
 <footer>
-  <div class="wrap"><span>Коммерческое предложение для «Стройкомфорт Стил» · 08.10.2026</span><span>© 2026 DEVENAS · Анастасия Девентейчик</span></div>
+  <div class="wrap"><span>Коммерческое предложение для «Стройкомфорт Стил» · октябрь 2026</span><span>© 2026 Devenas · Анастасия Девентейчик</span></div>
 </footer>
 
 <script>
@@ -687,95 +630,103 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const root = document.documentElement;
 
-  // Hero lines rise once fonts are in
+  // Split headline into words that rise one after another
+  document.querySelectorAll('.split').forEach(el => {
+    let i = 0;
+    const wrap = node => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(part => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.append(' '); return; }
+            const w = document.createElement('span'), s = document.createElement('span');
+            w.className = 'w'; s.textContent = part; s.style.transitionDelay = (i++ * 0.05) + 's';
+            w.append(s); frag.append(w);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) wrap(n);
+      });
+    };
+    wrap(el);
+  });
   const start = () => document.body.classList.add('loaded');
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => requestAnimationFrame(start));
   setTimeout(start, 1500);
 
-  const easeOut = p => 1 - Math.pow(1 - p, 4);
-  const tween = (dur, step) => {
-    const t0 = performance.now();
-    const tick = now => { const p = Math.min(1, (now - t0) / dur); step(easeOut(p)); if (p < 1) requestAnimationFrame(tick); };
-    requestAnimationFrame(tick);
-  };
-  // Count-up for numbers
-  const count = el => {
-    const target = +el.dataset.count, suffix = el.dataset.suffix || '';
-    if (reduce) return;
-    tween(1600, e => el.textContent = Math.round(target * e) + suffix);
-  };
-  // Count-up for prices
-  const money = el => {
-    const target = +el.dataset.price, small = el.querySelector('small').outerHTML;
-    const fmt = n => n.toLocaleString('ru-RU').replace(/ | /g, ' ');
-    if (reduce) return;
-    tween(1400, e => el.innerHTML = fmt(Math.round(target * e / 1000) * 1000) + small);
-  };
+  // Count-ups
+  const tween = (dur, step) => { const t0 = performance.now(); const f = now => { const p = Math.min(1, (now - t0) / dur); step(1 - Math.pow(1 - p, 4)); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); };
+  const count = el => { if (reduce) return; const t = +el.dataset.count, s = el.dataset.suffix || ''; tween(1400, e => el.textContent = Math.round(t * e) + s); };
+  const fmt = n => n.toLocaleString('ru-RU').replace(/ | /g, ' ');
+  const money = el => { if (reduce) return; const t = +el.dataset.price, sm = el.querySelector('small').outerHTML; tween(1300, e => el.innerHTML = fmt(Math.round(t * e / 1000) * 1000) + sm); };
 
-  const io = new IntersectionObserver(entries => entries.forEach(e => {
+  // Reveal on scroll, then hand transitions back to hover states
+  const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     const el = e.target;
     el.classList.add('in');
     el.querySelectorAll('[data-count]').forEach(count);
-    // Hand transitions back to hover states once the reveal has played
-    if (el.hasAttribute('data-reveal')) {
-      const delay = parseFloat(getComputedStyle(el).getPropertyValue('--d')) || 0;
-      setTimeout(() => el.removeAttribute('data-reveal'), 1200 + delay * 1000);
-    }
     el.querySelectorAll('[data-price]').forEach(money);
+    if (el.hasAttribute('data-r')) {
+      const d = parseFloat(getComputedStyle(el).getPropertyValue('--d')) || 0;
+      setTimeout(() => el.removeAttribute('data-r'), 950 + d * 1000);
+    }
     io.unobserve(el);
-  }), { threshold: .14, rootMargin: '0px 0px -6% 0px' });
-  document.querySelectorAll('[data-reveal], .rule, .marks, .swatches, .tl').forEach(el => io.observe(el));
+  }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('[data-r], .palette, .tl').forEach(el => io.observe(el));
 
-  // Header: solid after the top, hides on scroll down; progress line
-  const header = document.querySelector('header'), bar = document.querySelector('.progress');
+  // Sticky step counter follows the step in the middle of the screen
+  const steps = [...document.querySelectorAll('.step')];
+  const cnt = document.getElementById('cnt'), cntName = document.getElementById('cnt-name'), cntBar = document.getElementById('cnt-bar');
+  const so = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const i = steps.indexOf(e.target);
+    steps.forEach((s, k) => s.classList.toggle('on', k === i));
+    cnt.textContent = String(i + 1).padStart(2, '0');
+    cntName.textContent = e.target.dataset.name;
+    cntBar.style.width = ((i + 1) * 10) + '%';
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  steps.forEach(s => so.observe(s));
+  steps[0].classList.add('on');
+
+  // Floating header hides on scroll down; nav highlights current section
+  const header = document.querySelector('header');
+  const links = [...document.querySelectorAll('nav a')];
   let lastY = scrollY, ticking = false;
   const onScroll = () => {
-    const y = scrollY, max = root.scrollHeight - innerHeight;
-    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-    header.classList.toggle('solid', y > 40);
-    if (y > 400 && y > lastY + 4) header.classList.add('hide');
-    else if (y < lastY - 4 || y <= 400) header.classList.remove('hide');
+    const y = scrollY;
+    if (y > 300 && y > lastY + 6) header.classList.add('hide');
+    else if (y < lastY - 6 || y <= 300) header.classList.remove('hide');
+    if (y < 300) links.forEach(a => a.classList.remove('on'));
     lastY = y; ticking = false;
   };
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
+  const no =new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-40% 0px -55% 0px' });
+  links.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) no.observe(s); });
 
+  // Gentle magnetic pull on buttons
   if (fine && !reduce) {
-    // Soft copper light following the cursor in the hero
-    const hero = document.querySelector('.hero');
-    hero.addEventListener('pointermove', e => {
-      const r = hero.getBoundingClientRect();
-      hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-    // Magnetic buttons
     document.querySelectorAll('.btn').forEach(b => {
       b.addEventListener('pointermove', e => {
         const r = b.getBoundingClientRect();
-        b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .14}px, ${(e.clientY - r.top - r.height / 2) * .28}px)`;
+        b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .08}px, ${(e.clientY - r.top - r.height / 2) * .18}px)`;
       });
-      b.addEventListener('pointerleave', () => {
-        b.style.transition = 'transform .7s cubic-bezier(.2,.7,.1,1), color .5s, border-color .5s';
-        b.style.transform = '';
-        setTimeout(() => b.style.transition = '', 700);
-      });
+      b.addEventListener('pointerleave', () => b.style.transform = '');
     });
   }
 
-  // Smooth FAQ open/close
+  // Smooth FAQ
   document.querySelectorAll('.faq details').forEach(d => {
     const s = d.querySelector('summary'), a = d.querySelector('.ans');
     s.addEventListener('click', e => {
       if (reduce) return;
       e.preventDefault();
-      const opts = { duration: 520, easing: 'cubic-bezier(.2,.7,.1,1)' };
-      if (d.open) {
-        a.animate([{ height: a.scrollHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], opts).onfinish = () => d.open = false;
-      } else {
-        d.open = true;
-        a.animate([{ height: '0px', opacity: 0 }, { height: a.scrollHeight + 'px', opacity: 1 }], opts);
-      }
+      const o = { duration: 480, easing: 'cubic-bezier(.16,1,.3,1)' };
+      if (d.open) a.animate([{ height: a.scrollHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], o).onfinish = () => d.open = false;
+      else { d.open = true; a.animate([{ height: '0px', opacity: 0 }, { height: a.scrollHeight + 'px', opacity: 1 }], o); }
     });
   });
 })();
