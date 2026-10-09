@@ -247,6 +247,7 @@ section{padding-top:clamp(64px,8vw,104px)}
 .stats span{font-size:13px;color:var(--muted)}
 .cases{margin-top:28px}
 .case{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.case>.chip{align-self:start;justify-self:start;white-space:nowrap}
 .case b{font-weight:500;display:block}
 .case p{font-size:14px;color:var(--muted)}
 .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
@@ -315,6 +316,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .price{padding:24px}
   .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
   .stats div{padding:14px}
+  .case{grid-template-columns:1fr;gap:10px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important}
