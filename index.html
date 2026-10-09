@@ -32,14 +32,13 @@ h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.035em;line-
 h2{font-size:clamp(36px,5.2vw,72px);letter-spacing:-.045em}
 h3{font-size:clamp(20px,1.7vw,24px);letter-spacing:-.02em;line-height:1.2}
 .muted{color:var(--muted)}
-.label{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--ink2)}
-.label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.label{display:inline-flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:500;line-height:1.6;color:var(--ink2)}
+.label::before{content:"";flex:none;width:6px;height:6px;margin-top:calc(.8em - 3px);border-radius:50%;background:var(--accent)}
 .chip{display:inline-flex;align-items:center;font-size:12px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--bg);color:var(--ink2);border:1px solid var(--line)}
 
 /* header */
 header{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
 .bar{pointer-events:auto;max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 22px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border:1px solid var(--line);box-shadow:0 8px 30px -12px rgba(11,11,12,.12);transition:transform .6s var(--ease),box-shadow .4s}
-header.hide .bar{transform:translateY(-140%)}
 .brand{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.01em}
 nav{display:flex;gap:4px}
 nav a{font-size:14px;color:var(--ink2);padding:8px 14px;border-radius:999px;transition:background .3s,color .3s}
@@ -491,7 +490,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card price key hover" data-r style="--d:.06s">
         <div class="ph"><span class="label" style="color:rgba(255,255,255,.75)">Оптимальный</span><span class="badge">Рекомендую</span></div>
         <h3>Фирменный стиль</h3><span class="term">5 недель</span>
-        <div class="amount">70 000<small>₽</small></div>
+        <div class="amount">60 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Логотип»</li>
                     <li>Платформа бренда: позиционирование, аргументы, тон</li>
@@ -506,13 +505,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card price hover" data-r style="--d:.12s">
         <div class="ph"><span class="label">Максимум</span></div>
         <h3>Бренд под ключ</h3><span class="term">7 недель</span>
-        <div class="amount">120 000<small>₽</small></div>
+        <div class="amount">100 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Фирменный стиль»</li>
           <li>Вывеска на площадку</li>
           <li>Спецодежда</li>
           <li>Рекламный щит</li>
-          <li>Табличка на готовый дом</li>
           <li>6 шаблонов объявлений и соцсетей</li>
           <li>Концепция главной страницы сайта</li>
           <li>Брендбук на 35 страниц</li>
@@ -700,14 +698,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   steps.forEach(s => so.observe(s));
   steps[0].classList.add('on');
 
-  // Floating header hides on scroll down; nav highlights current section
+  // Header stays fixed; nav highlights current section
   const header = document.querySelector('header');
   const links = [...document.querySelectorAll('nav a')];
   let lastY = scrollY, ticking = false;
   const onScroll = () => {
     const y = scrollY;
-    if (y > 300 && y > lastY + 6) header.classList.add('hide');
-    else if (y < lastY - 6 || y <= 300) header.classList.remove('hide');
     if (y < 300) links.forEach(a => a.classList.remove('on'));
     lastY = y; ticking = false;
   };
