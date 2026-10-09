@@ -78,6 +78,18 @@ nav a.on{background:var(--ink);color:#fff}
 .showcase{margin-top:clamp(48px,6vw,80px);position:relative;border-radius:calc(var(--r) + 8px);background:var(--graphite);overflow:hidden;aspect-ratio:16/7;display:grid;place-items:center;isolation:isolate}
 .showcase::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 0%,rgba(255,255,255,.09),transparent 70%);z-index:-1}
 .showcase .grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.showcase{aspect-ratio:auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,56px)}
+.path{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:0;width:100%;max-width:1040px}
+.path::before{content:"";position:absolute;left:8%;right:8%;top:23px;height:1px;background:rgba(255,255,255,.16)}
+.path::after{content:"";position:absolute;left:8%;top:23px;height:1px;width:0;background:#fff;transition:width 2.2s var(--ease) .7s}
+.loaded .path::after{width:84%}
+.pstep{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;color:#fff;text-align:center}
+.pstep span{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#18181A;border:1px solid rgba(255,255,255,.18);font-size:13px;font-weight:500;color:rgba(255,255,255,.8)}
+.pstep b{font-family:var(--display);font-weight:500;font-size:clamp(14px,1.5vw,20px);letter-spacing:-.02em}
+.pstep.hot span{background:#fff;color:var(--ink);border-color:#fff}
+.js .pstep{opacity:0;transform:translateY(12px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.loaded .pstep{opacity:1;transform:none}
+.loaded .pstep:nth-child(2){transition-delay:.1s}.loaded .pstep:nth-child(3){transition-delay:.2s}.loaded .pstep:nth-child(4){transition-delay:.3s}.loaded .pstep:nth-child(5){transition-delay:.4s}.loaded .pstep:nth-child(6){transition-delay:.5s}
 .lock{display:flex;align-items:center;gap:clamp(14px,2vw,28px);color:#fff}
 .lock svg{width:clamp(56px,8vw,112px)}
 .lock b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(26px,4.6vw,68px);letter-spacing:-.02em;line-height:1}
@@ -270,7 +282,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:640px){
   .bar{margin:0 12px}
   .hero h1{font-size:42px}
-  .showcase{aspect-ratio:4/3}
+  .path{grid-template-columns:repeat(3,1fr);row-gap:28px}
+  .showcase .tag.r{display:none}
+  .path::before,.path::after{display:none}
   .fact{padding:20px}
   .deliv{grid-template-columns:1fr}
   .tl-head{display:none}
@@ -323,16 +337,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
     <div class="showcase" data-r style="--d:.2s">
       <div class="grid-bg"></div>
-      <div class="lock">
-        <svg viewBox="0 0 200 160" aria-hidden="true"><path fill-rule="evenodd" fill="#fff" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg>
-        <div><b>СТРОЙКОМФОРТ</b><span>СТИЛ</span></div>
+      <div class="path">
+        <div class="pstep"><span>01</span><b>Бриф</b></div>
+        <div class="pstep"><span>02</span><b>Платформа</b></div>
+        <div class="pstep hot"><span>03</span><b>Логотип</b></div>
+        <div class="pstep"><span>04</span><b>Стиль</b></div>
+        <div class="pstep"><span>05</span><b>Носители</b></div>
+        <div class="pstep"><span>06</span><b>Брендбук</b></div>
       </div>
-      <span class="tag">Эскиз · направление A</span>
-      <span class="tag r">Графит ≈ RAL 7021</span>
+      <span class="tag">Путь проекта · 5 недель</span>
+      <span class="tag r">От брифа до готовых файлов</span>
     </div>
     <div class="facts">
       <div class="fact" data-r><b data-count="5">5</b><span>недель от брифа до брендбука</span></div>
-      <div class="fact" data-r style="--d:.06s"><b data-count="3">3</b><span>направления знака на выбор</span></div>
+      <div class="fact" data-r style="--d:.06s"><b data-count="10">10</b><span>этапов, каждый — с вашим утверждением</span></div>
       <div class="fact" data-r style="--d:.12s"><b>0</b><span>обязательных созвонов — старт через подробный бриф</span></div>
       <div class="fact" data-r style="--d:.18s"><b data-count="100" data-suffix="%">100%</b><span>исключительных прав переходит вам</span></div>
     </div>
@@ -353,40 +371,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
     <div class="essence" data-r>
       <h3>Сталь. Срок.<br><span>Своё производство.</span></h3>
-      <p>Суть бренда в трёх словах. «Стил» в названии отвечает за сталь и производство, «комфорт» объясняет, почему у поставщика контейнеров есть жилые модули. Графит, тёмная сталь и один тёплый акцент — медь: подальше и от портового синего, и от оранжевого строймаркета.</p>
+      <p>Суть бренда в трёх словах. «Стил» в названии отвечает за сталь и производство, «комфорт» объясняет, почему у поставщика контейнеров есть жилые модули. Стиль будет промышленным и спокойным — без «скидочного» строймаркета и без портовой логистики.</p>
     </div>
-  </div>
-</section>
-
-<!-- SKETCHES -->
-<section id="sketches">
-  <div class="wrap">
-    <div class="shead">
-      <div><span class="label" data-r>02 — Первые эскизы</span><h2 data-r style="--d:.05s">Три идеи знака уже есть</h2></div>
-      <p data-r style="--d:.1s">Это наброски из карты бренда, чтобы вы видели, куда мы пойдём. На этапе логотипа каждое направление будет проработано и проверено на носителях.</p>
-    </div>
-    <div class="marks">
-      <div class="card mark hover" data-r>
-        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление A: торец контейнера"><path class="g" fill-rule="evenodd" fill="#2F3234" d="M0 0H97V160H0Z M28 22H40V138H28Z M60 22H72V138H60Z M103 0H200V160H103Z M128 22H140V138H128Z M160 22H172V138H160Z"/></svg></div>
-        <div class="body"><div class="top"><h3>A · Торец</h3><span class="badge">Рекомендую</span></div><p>Двустворчатый торец с запорными штангами — самый узнаваемый образ. Работает от 10 мм до борта.</p></div>
-      </div>
-      <div class="card mark hover" data-r style="--d:.06s">
-        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление B: объём контейнера"><path class="g" fill="#2F3234" d="M0 40L40 0H200L160 40Z"/><path class="g" fill="#2F3234" d="M0 48H152V160H0Z"/><path class="g" fill="#2F3234" d="M160 48L200 8V120L160 160Z"/></svg></div>
-        <div class="body"><div class="top"><h3>B · Объём</h3></div><p>Характерный параллелепипед из трёх граней. Читается как модуль и склад одновременно.</p></div>
-      </div>
-      <div class="card mark hover" data-r style="--d:.12s">
-        <div class="stage"><svg viewBox="0 0 200 160" aria-label="Направление C: торец с тёплым проёмом"><path class="g" fill-rule="evenodd" fill="#2F3234" d="M0 0H200V160H0Z M112 28H172V88H112Z"/><path fill="#B5653A" d="M120 36H164V80H120Z"/></svg></div>
-        <div class="body"><div class="top"><h3>C · Торец и проём</h3></div><p>Торец с тёплым окном — мост к линейке домов. В одну краску окно становится вырезом.</p></div>
-      </div>
-    </div>
-    <div class="palette" aria-label="Предварительная палитра">
-      <div style="background:#2F3234;color:#fff">Графит<small>≈ RAL 7021</small></div>
-      <div style="background:#3F454A;color:#fff">Тёмная сталь<small>≈ RAL 7016</small></div>
-      <div style="background:#7D8185;color:#fff">Сталь<small>≈ RAL 7037</small></div>
-      <div style="background:#fff;color:var(--ink);border:1px solid var(--line)">Бумага<small>≈ RAL 9002</small></div>
-      <div style="background:#A35A38;color:#fff">Медь<small>≈ RAL 8004</small></div>
-    </div>
-    <p class="hint">Наведите на эскиз, чтобы увидеть знак на тёмном металле.</p>
   </div>
 </section>
 
@@ -394,7 +380,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="steps">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>03 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
+      <div><span class="label" data-r>02 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
       <p data-r style="--d:.1s">Всю информацию собираем через подробный бриф, остальное — в переписке, когда вам удобно. Каждый этап заканчивается вашим утверждением.</p>
     </div>
     <div class="steps-wrap">
@@ -415,8 +401,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="card step" data-r data-name="Исследование"><span class="idx">03</span><h3>Исследование</h3><ul><li>Анализ 8–10 конкурентов: перекупщики, продавцы бытовок, модульные дома</li><li>Две аудитории: покупатели и арендаторы контейнеров, заказчики домов</li></ul><span class="out">Результат: карта конкурентов</span></div>
         <div class="card step" data-r data-name="Платформа бренда"><span class="idx">04</span><h3>Платформа бренда</h3><ul><li>Суть, позиционирование, аргументы «почему мы»</li><li>Характер и тон: как бренд говорит в объявлениях и КП</li></ul><span class="out">Результат: карта бренда</span></div>
         <div class="card step" data-r data-name="Мудборд"><span class="idx">05</span><h3>Мудборд</h3><ul><li>Настроение, фактуры, цвет, шрифты, референсы</li><li>Сразу проверяем, как это смотрится на металле и на бумаге</li></ul><span class="out">Результат: утверждённое настроение</span></div>
-        <div class="card step" data-r data-name="Концепции знака"><span class="idx">06</span><h3>Концепции знака</h3><ul><li>Три направления логотипа, каждое — на борту, торце контейнера и бланке</li><li>Вы выбираете одно для доработки</li></ul><span class="out">Результат: выбранное направление</span></div>
-        <div class="card step" data-r data-name="Доработка логотипа"><span class="idx">07</span><h3>Доработка логотипа</h3><ul><li>Связка «Стройкомфорт» и «Стил»: пропорции, разрядка, выравнивание</li><li>Версии: горизонтальная, вертикальная, знак отдельно, в одну краску</li><li>Проверка от 10 мм до нескольких метров</li></ul><span class="out">Результат: утверждённый логотип</span></div>
+        <div class="card step" data-r data-name="Разработка логотипа"><span class="idx">06</span><h3>Разработка логотипа</h3><ul><li>Создаю знак и словесную часть на основе утверждённых платформы и мудборда</li><li>Сразу проверяю на борту, торце контейнера и бланке</li><li>Показываю одно проработанное решение с объяснением, почему оно работает</li></ul><span class="out">Результат: логотип на согласование</span></div>
+        <div class="card step" data-r data-name="Доработка и финализация"><span class="idx">07</span><h3>Доработка и финализация</h3><ul><li>Вношу правки по вашим комментариям</li><li>Связка «Стройкомфорт» и «Стил»: пропорции, разрядка, выравнивание</li><li>Версии: горизонтальная, вертикальная, знак отдельно, в одну краску</li><li>Проверка от 10 мм до нескольких метров</li></ul><span class="out">Результат: утверждённый логотип</span></div>
         <div class="card step" data-r data-name="Фирменный стиль"><span class="idx">08</span><h3>Фирменный стиль</h3><ul><li>Цвета с кодами RAL, CMYK, Pantone и RGB</li><li>Шрифты с кириллицей, графические элементы, стиль фото и иконок</li></ul><span class="out">Результат: система стиля</span></div>
         <div class="card step" data-r data-name="Носители"><span class="idx">09</span><h3>Носители</h3><ul><li>Маркировка контейнера, борт контейнеровоза, документы, объявления — по составу пакета</li><li>Макеты с размерами, готовые для печати и покраски</li></ul><span class="out">Результат: макеты для производства</span></div>
         <div class="card step" data-r data-name="Брендбук и передача"><span class="idx">10</span><h3>Брендбук и передача</h3><ul><li>Правила, понятные печатнику, маляру и веб-студии</li><li>Передача исходников и договор об отчуждении прав</li><li>2 недели бесплатной поддержки: отвечаю подрядчикам, проверяю первые выпуски</li></ul><span class="out">Результат: брендбук и все файлы</span></div>
@@ -439,7 +425,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="prices">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>04 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
+      <div><span class="label" data-r>03 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
       <p data-r style="--d:.1s">Сумма фиксируется в договоре и не меняется в ходе работы. Бриф без созвонов и готовая карта бренда позволили снизить стоимость без потери качества.</p>
     </div>
     <div class="prices">
@@ -449,7 +435,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="amount" data-price="30000">30 000<small>₽</small></div>
         <ul>
           <li>Подробный бриф и анализ конкурентов</li>
-          <li>2 направления знака</li>
+          <li>Разработка логотипа: знак и словесная часть</li>
           <li>Горизонтальная и вертикальная версии, знак отдельно</li>
           <li>Цветная и одноцветная версии</li>
           <li>Базовые цвета и шрифты</li>
@@ -464,8 +450,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="amount" data-price="70000">70 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Логотип»</li>
-          <li>3 направления знака вместо 2</li>
-          <li>Платформа бренда: позиционирование, аргументы, тон</li>
+                    <li>Платформа бренда: позиционирование, аргументы, тон</li>
           <li>Цвета с кодами RAL, CMYK, Pantone, RGB</li>
           <li>Графические элементы и стиль фото</li>
           <li>Маркировка контейнера и борт контейнеровоза</li>
@@ -508,7 +493,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="result">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>05 — Результат</span><h2 data-r style="--d:.05s">Файлы, готовые к работе</h2></div>
+      <div><span class="label" data-r>04 — Результат</span><h2 data-r style="--d:.05s">Файлы, готовые к работе</h2></div>
       <p data-r style="--d:.1s">Печатник, маляр, производитель вывесок или веб-студия получат всё необходимое — без звонков дизайнеру.</p>
     </div>
     <div class="deliv">
@@ -528,7 +513,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="about">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>06 — Обо мне</span><h2 data-r style="--d:.05s">Кто будет делать ваш бренд</h2></div>
+      <div><span class="label" data-r>05 — Обо мне</span><h2 data-r style="--d:.05s">Кто будет делать ваш бренд</h2></div>
     </div>
     <div class="about">
       <div class="card me" data-r>
@@ -548,7 +533,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
         <div class="cases">
           <div class="case"><div><b>Центр интимной эстетики</b><p>Логотип в 2024 году, затем сайт на Tilda, сейчас — платформа в коде. Клиент со мной с 2024 года.</p></div><span class="chip">Логотип → платформа</span></div>
-          <div class="case"><div><b>PerfectMatch</b><p>HR-консалтинг для крупного бизнеса: логотип в трёх вариантах, мини-гайдлайн и двуязычный сайт.</p></div><span class="chip">Логотип + сайт</span></div>
+          <div class="case"><div><b>PerfectMatch</b><p>HR-консалтинг для крупного бизнеса: логотип, мини-гайдлайн и двуязычный сайт.</p></div><span class="chip">Логотип + сайт</span></div>
           <div class="case"><div><b>NTGUILTY, EURASIA, МЯСО &amp; БУЛКА и другие</b><p>Сайты для адвокатов, магазина профкосметики, бургерной, туров и тренера.</p></div><span class="chip">Сайты</span></div>
         </div>
         <div class="links">
@@ -565,7 +550,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="terms">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>07 — Условия</span><h2 data-r style="--d:.05s">Как договоримся</h2></div>
+      <div><span class="label" data-r>06 — Условия</span><h2 data-r style="--d:.05s">Как договоримся</h2></div>
     </div>
     <div class="bento3">
       <div class="card hover" data-r><span class="idx">50/50</span><h3>Оплата в два этапа</h3><p>50% — предоплата перед стартом, 50% — после утверждения логотипа, до передачи исходников.</p></div>
@@ -589,11 +574,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="faq">
   <div class="wrap">
     <div class="shead">
-      <div><span class="label" data-r>08 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
+      <div><span class="label" data-r>07 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
     </div>
     <div class="faq" data-r>
       <details><summary>Обязательно ли созваниваться?<i></i></summary><div class="ans"><p>Нет. Всё, что мне нужно, вы расскажете в подробном брифе, а вопросы по ходу работы решаем в переписке. Если захотите обсудить что-то голосом — тоже можно.</p></div></details>
-      <details><summary>А если ни одно направление знака не понравится?<i></i></summary><div class="ans"><p>Перед эскизами мы утверждаем платформу и мудборд, поэтому промахнуться сложно. Если всё же ни одно направление не подойдёт, сделаю ещё одно в рамках правок этапа.</p></div></details>
+      <details><summary>А если логотип не понравится?<i></i></summary><div class="ans"><p>До разработки мы утверждаем платформу бренда и мудборд, поэтому логотип опирается на уже согласованное направление. Доработки входят в два круга правок на этапе.</p></div></details>
       <details><summary>Почему в знаке не будет дома, если вы строите дома?<i></i></summary><div class="ans"><p>Основной спрос — контейнеры: их покупают и арендуют каждый день. Дом в знаке превратит вас в домостроительную компанию и отпугнёт основной поток клиентов. Дома мы покажем на сайте и в рекламе.</p></div></details>
       <details><summary>Логотип можно будет нанести краской на контейнер?<i></i></summary><div class="ans"><p>Да, это главное требование. Знак работает в одну краску, без градиентов и тонких линий. Вы получите трафарет в натуральную величину и номера краски по RAL.</p></div></details>
       <details><summary>Можно начать с логотипа, а стиль заказать потом?<i></i></summary><div class="ans"><p>Да. Логотип станет основой, а фирменный стиль и носители можно заказать позже — без переделки знака.</p></div></details>
