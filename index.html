@@ -349,10 +349,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <span class="tag r">От брифа до готовых файлов</span>
     </div>
     <div class="facts">
-      <div class="fact" data-r><b data-count="5">5</b><span>недель от брифа до брендбука</span></div>
-      <div class="fact" data-r style="--d:.06s"><b data-count="10">10</b><span>этапов, каждый — с вашим утверждением</span></div>
+      <div class="fact" data-r><b>5</b><span>недель от брифа до брендбука</span></div>
+      <div class="fact" data-r style="--d:.06s"><b>10</b><span>этапов, каждый — с вашим утверждением</span></div>
       <div class="fact" data-r style="--d:.12s"><b>0</b><span>обязательных созвонов — старт через подробный бриф</span></div>
-      <div class="fact" data-r style="--d:.18s"><b data-count="100" data-suffix="%">100%</b><span>исключительных прав переходит вам</span></div>
+      <div class="fact" data-r style="--d:.18s"><b>100%</b><span>исключительных прав переходит вам</span></div>
     </div>
   </div>
 </div>
@@ -432,7 +432,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card price hover" data-r>
         <div class="ph"><span class="label">Старт</span></div>
         <h3>Логотип</h3><span class="term">2 недели</span>
-        <div class="amount" data-price="30000">30 000<small>₽</small></div>
+        <div class="amount">30 000<small>₽</small></div>
         <ul>
           <li>Подробный бриф и анализ конкурентов</li>
           <li>Разработка логотипа: знак и словесная часть</li>
@@ -447,13 +447,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card price key hover" data-r style="--d:.06s">
         <div class="ph"><span class="label" style="color:rgba(255,255,255,.75)">Оптимальный</span><span class="badge">Рекомендую</span></div>
         <h3>Фирменный стиль</h3><span class="term">5 недель</span>
-        <div class="amount" data-price="70000">70 000<small>₽</small></div>
+        <div class="amount">70 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Логотип»</li>
                     <li>Платформа бренда: позиционирование, аргументы, тон</li>
-          <li>Цвета с кодами RAL, CMYK, Pantone, RGB</li>
+          <li>Цвета с кодами RAL, CMYK, RGB</li>
           <li>Графические элементы и стиль фото</li>
-          <li>Маркировка контейнера и борт контейнеровоза</li>
           <li>Бланк, КП и договор</li>
           <li>3 шаблона объявлений и соцсетей</li>
           <li>Брендбук на 20 страниц</li>
@@ -463,7 +462,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card price hover" data-r style="--d:.12s">
         <div class="ph"><span class="label">Максимум</span></div>
         <h3>Бренд под ключ</h3><span class="term">7 недель</span>
-        <div class="amount" data-price="120000">120 000<small>₽</small></div>
+        <div class="amount">120 000<small>₽</small></div>
         <ul>
           <li class="plus">Всё из пакета «Фирменный стиль»</li>
           <li>Вывеска на площадку</li>
@@ -527,8 +526,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h3 style="font-size:clamp(24px,2.4vw,32px);letter-spacing:-.035em">Дизайнер с экономическим мышлением</h3>
         <p style="color:var(--ink2);font-size:16px;margin-top:14px">По образованию я экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него. Веду проект сама от брифа до передачи файлов — вы всегда общаетесь с тем, кто делает работу. Работаю официально: договор и чеки.</p>
         <div class="stats">
-          <div><b data-count="3" data-suffix="+">3+</b><span>года в дизайне</span></div>
-          <div><b data-count="10" data-suffix="+">10+</b><span>проектов для бизнеса</span></div>
+          <div><b>3+</b><span>года в дизайне</span></div>
+          <div><b>10+</b><span>проектов для бизнеса</span></div>
           <div><b>RU/EN</b><span>языки проектов</span></div>
         </div>
         <div class="cases">
@@ -639,19 +638,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => requestAnimationFrame(start));
   setTimeout(start, 1500);
 
-  // Count-ups
-  const tween = (dur, step) => { const t0 = performance.now(); const f = now => { const p = Math.min(1, (now - t0) / dur); step(1 - Math.pow(1 - p, 4)); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); };
-  const count = el => { if (reduce) return; const t = +el.dataset.count, s = el.dataset.suffix || ''; tween(1400, e => el.textContent = Math.round(t * e) + s); };
-  const fmt = n => n.toLocaleString('ru-RU').replace(/ | /g, ' ');
-  const money = el => { if (reduce) return; const t = +el.dataset.price, sm = el.querySelector('small').outerHTML; tween(1300, e => el.innerHTML = fmt(Math.round(t * e / 1000) * 1000) + sm); };
-
   // Reveal on scroll, then hand transitions back to hover states
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     const el = e.target;
     el.classList.add('in');
-    el.querySelectorAll('[data-count]').forEach(count);
-    el.querySelectorAll('[data-price]').forEach(money);
     if (el.hasAttribute('data-r')) {
       const d = parseFloat(getComputedStyle(el).getPropertyValue('--d')) || 0;
       setTimeout(() => el.removeAttribute('data-r'), 950 + d * 1000);
