@@ -105,8 +105,8 @@ nav a.on{background:var(--ink);color:#fff}
 .fact span{display:block;margin-top:12px;font-size:14px;color:var(--muted);line-height:1.45}
 
 /* sections */
-section{padding-top:clamp(104px,13vw,168px)}
-.shead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+section{padding-top:clamp(64px,8vw,104px)}
+.shead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(28px,3.5vw,44px)}
 .shead .label{margin-bottom:20px}
 .shead p{font-size:18px;color:var(--ink2);max-width:520px;line-height:1.55;justify-self:end}
 
@@ -232,11 +232,6 @@ section{padding-top:clamp(104px,13vw,168px)}
 .links a:hover{background:var(--ink);color:#fff}
 
 /* terms */
-.need{margin-top:12px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px}
-.need ul{list-style:none}
-.need li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink2)}
-.need li:last-child{border-bottom:0}
-.need li::before{content:"";width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line2);margin-top:1px}
 
 /* faq */
 .faq{display:flex;flex-direction:column;gap:8px}
@@ -269,7 +264,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* responsive */
 @media (max-width:1024px){
   nav{display:none}
-  .shead,.hero-row,.essence,.steps-wrap,.about,.need,.cta-row{grid-template-columns:1fr}
+  .shead,.hero-row,.essence,.steps-wrap,.about,.cta-row{grid-template-columns:1fr}
   .shead p{justify-self:start}
   .steps-side{position:static}
   .counter{display:none}
@@ -338,7 +333,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="showcase" data-r style="--d:.2s">
       <div class="grid-bg"></div>
       <div class="path">
-        <div class="pstep"><span>01</span><b>Бриф</b></div>
+        <div class="pstep"><span>01</span><b>ТЗ</b></div>
         <div class="pstep"><span>02</span><b>Платформа</b></div>
         <div class="pstep hot"><span>03</span><b>Логотип</b></div>
         <div class="pstep"><span>04</span><b>Стиль</b></div>
@@ -346,12 +341,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="pstep"><span>06</span><b>Брендбук</b></div>
       </div>
       <span class="tag">Путь проекта · 5 недель</span>
-      <span class="tag r">От брифа до готовых файлов</span>
+      <span class="tag r">От ТЗ до готовых файлов</span>
     </div>
     <div class="facts">
-      <div class="fact" data-r><b>5</b><span>недель от брифа до брендбука</span></div>
+      <div class="fact" data-r><b>5</b><span>недель от старта до брендбука</span></div>
       <div class="fact" data-r style="--d:.06s"><b>10</b><span>этапов, каждый — с вашим утверждением</span></div>
-      <div class="fact" data-r style="--d:.12s"><b>0</b><span>обязательных созвонов — старт через подробный бриф</span></div>
+      <div class="fact" data-r style="--d:.12s"><b>0</b><span>анкет и обязательных созвонов — работаю по вашему описанию</span></div>
       <div class="fact" data-r style="--d:.18s"><b>100%</b><span>исключительных прав переходит вам</span></div>
     </div>
   </div>
@@ -381,21 +376,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="shead">
       <div><span class="label" data-r>02 — Как я работаю</span><h2 data-r style="--d:.05s">Десять шагов без лишних встреч</h2></div>
-      <p data-r style="--d:.1s">Всю информацию собираем через подробный бриф, остальное — в переписке, когда вам удобно. Каждый этап заканчивается вашим утверждением.</p>
+      <p data-r style="--d:.1s">Опираюсь на ваше описание и видение бренда — дополнительный бриф не нужен, вопросы решаем в переписке. Каждый этап заканчивается вашим утверждением.</p>
     </div>
     <div class="steps-wrap">
       <aside class="steps-side">
         <div class="counter"><span id="cnt">01</span><small>/ 10</small></div>
-        <div class="counter-name" id="cnt-name">Подробный бриф</div>
+        <div class="counter-name" id="cnt-name">ТЗ по вашему описанию</div>
         <div class="track"><i id="cnt-bar"></i></div>
         <p>Следующий шаг начинаю только после вашего «да» — вы всегда знаете, что происходит и что получите на выходе.</p>
       </aside>
       <div class="steps">
-        <div class="card step key" data-r data-name="Подробный бриф">
-          <span class="idx">01</span><h3>Подробный бриф вместо созвона</h3>
-          <ul><li>Онлайн-анкета из 40 вопросов — 40–60 минут, когда удобно</li><li>Можно отвечать частями и подключить менеджера по продажам</li><li>Если что-то неясно, уточню в переписке</li></ul>
-          <div class="chips"><span class="chip">Компания и производство</span><span class="chip">Продукты и цены</span><span class="chip">Клиенты</span><span class="chip">Конкуренты</span><span class="chip">Носители и размеры</span><span class="chip">Что нравится и что нет</span></div>
-          <span class="out">Результат: заполненный бриф</span>
+        <div class="card step key" data-r data-name="ТЗ по вашему описанию">
+          <span class="idx">01</span><h3>ТЗ по вашему описанию</h3>
+          <ul><li>Беру за основу ваше описание бизнеса и видение бренда — заполнять анкету не нужно</li><li>Собираю из него техническое задание и присылаю на согласование</li><li>Если понадобятся детали, уточню в переписке</li></ul>
+          <div class="chips"><span class="chip">Основное направление</span><span class="chip">Клиенты</span><span class="chip">Почему выбирают вас</span><span class="chip">Характер бренда</span><span class="chip">Носители</span><span class="chip">Визуальные ориентиры</span></div>
+          <span class="out">Результат: согласованное ТЗ</span>
         </div>
         <div class="card step" data-r data-name="Договор и старт"><span class="idx">02</span><h3>Договор и старт</h3><ul><li>Фиксируем пакет, сроки и стоимость</li><li>Работаю официально как самозанятая: договор и чеки</li><li>Предоплата 50%</li></ul><span class="out">Результат: договор и график</span></div>
         <div class="card step" data-r data-name="Исследование"><span class="idx">03</span><h3>Исследование</h3><ul><li>Анализ 8–10 конкурентов: перекупщики, продавцы бытовок, модульные дома</li><li>Две аудитории: покупатели и арендаторы контейнеров, заказчики домов</li></ul><span class="out">Результат: карта конкурентов</span></div>
@@ -411,7 +406,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     <div class="card tl" aria-label="График пакета «Фирменный стиль»">
       <div class="tl-head"><div>Неделя 1</div><div>Неделя 2</div><div>Неделя 3</div><div>Неделя 4</div><div>Неделя 5</div></div>
-      <div class="tl-row"><div class="tl-bar" style="grid-column:1/2"><b>Бриф и платформа</b>этапы 01–04</div></div>
+      <div class="tl-row"><div class="tl-bar" style="grid-column:1/2"><b>ТЗ и платформа</b>этапы 01–04</div></div>
       <div class="tl-row"><div class="tl-bar key" style="grid-column:2/4"><b>Мудборд и логотип</b>этапы 05–07</div></div>
       <div class="tl-row"><div class="tl-bar" style="grid-column:4/5"><b>Стиль и носители</b>этапы 08–09</div></div>
       <div class="tl-row"><div class="tl-bar" style="grid-column:5/6"><b>Брендбук</b>этап 10</div></div>
@@ -426,7 +421,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="shead">
       <div><span class="label" data-r>03 — Стоимость</span><h2 data-r style="--d:.05s">Три формата, одна цена в договоре</h2></div>
-      <p data-r style="--d:.1s">Сумма фиксируется в договоре и не меняется в ходе работы. Бриф без созвонов и готовая карта бренда позволили снизить стоимость без потери качества.</p>
+      <p data-r style="--d:.1s">Сумма фиксируется в договоре и не меняется в ходе работы. Работа по вашему готовому описанию и карта бренда позволили снизить стоимость без потери качества.</p>
     </div>
     <div class="prices">
       <div class="card price hover" data-r>
@@ -434,7 +429,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h3>Логотип</h3><span class="term">2 недели</span>
         <div class="amount">30 000<small>₽</small></div>
         <ul>
-          <li>Подробный бриф и анализ конкурентов</li>
+          <li>ТЗ по вашему описанию и анализ конкурентов</li>
           <li>Разработка логотипа: знак и словесная часть</li>
           <li>Горизонтальная и вертикальная версии, знак отдельно</li>
           <li>Цветная и одноцветная версии</li>
@@ -524,13 +519,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
       <div class="card" data-r style="--d:.08s">
         <h3 style="font-size:clamp(24px,2.4vw,32px);letter-spacing:-.035em">Дизайнер с экономическим мышлением</h3>
-        <p style="color:var(--ink2);font-size:16px;margin-top:14px">По образованию я экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него. Веду проект сама от брифа до передачи файлов — вы всегда общаетесь с тем, кто делает работу. Работаю официально: договор и чеки.</p>
+        <p style="color:var(--ink2);font-size:16px;margin-top:14px">По образованию я экономист, поэтому смотрю на дизайн как на инструмент, который должен приносить заявки и деньги. Красота важна, но она работает на результат, а не вместо него. Веду проект сама от первого сообщения до передачи файлов — вы всегда общаетесь с тем, кто делает работу. Работаю официально: договор и чеки.</p>
         <div class="stats">
           <div><b>3+</b><span>года в дизайне</span></div>
           <div><b>10+</b><span>проектов для бизнеса</span></div>
           <div><b>RU/EN</b><span>языки проектов</span></div>
         </div>
         <div class="cases">
+          <div class="case"><div><b>Простые системы</b><p>Монтаж инженерных систем под ключ: отопление, водоснабжение, канализация. Логотип, прототип и дизайн сайта.</p></div><span class="chip">Логотип + сайт</span></div>
           <div class="case"><div><b>Центр интимной эстетики</b><p>Логотип в 2024 году, затем сайт на Tilda, сейчас — платформа в коде. Клиент со мной с 2024 года.</p></div><span class="chip">Логотип → платформа</span></div>
           <div class="case"><div><b>PerfectMatch</b><p>HR-консалтинг для крупного бизнеса: логотип, мини-гайдлайн и двуязычный сайт.</p></div><span class="chip">Логотип + сайт</span></div>
           <div class="case"><div><b>NTGUILTY, EURASIA, МЯСО &amp; БУЛКА и другие</b><p>Сайты для адвокатов, магазина профкосметики, бургерной, туров и тренера.</p></div><span class="chip">Сайты</span></div>
@@ -556,16 +552,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card hover" data-r style="--d:.06s"><span class="idx">2×</span><h3>Два круга правок на этап</h3><p>Входят в стоимость. Возврат к уже утверждённому этапу — дополнительный круг за 5 000 ₽.</p></div>
       <div class="card hover" data-r style="--d:.12s"><span class="idx">100%</span><h3>Права переходят вам</h3><p>Исключительные права — по договору об отчуждении после полной оплаты. Этого достаточно для регистрации товарного знака.</p></div>
     </div>
-    <div class="card need" data-r>
-      <div><h3>Что нужно от вас</h3><p class="muted" style="margin-top:8px;font-size:15px">Немного — и всё можно сделать в удобное время.</p></div>
-      <ul>
-        <li>Заполненный бриф — 40–60 минут в удобное время</li>
-        <li>Один человек, который принимает решения по проекту</li>
-        <li>Фото площадок, контейнеров, техники и готовых домов</li>
-        <li>Размеры бортов машин и места под вывеску</li>
-        <li>Ответы на материалы в течение 2 рабочих дней — так сроки не сдвигаются</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -576,7 +562,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div><span class="label" data-r>07 — Вопросы</span><h2 data-r style="--d:.05s">Коротко о важном</h2></div>
     </div>
     <div class="faq" data-r>
-      <details><summary>Обязательно ли созваниваться?<i></i></summary><div class="ans"><p>Нет. Всё, что мне нужно, вы расскажете в подробном брифе, а вопросы по ходу работы решаем в переписке. Если захотите обсудить что-то голосом — тоже можно.</p></div></details>
+      <details><summary>Нужно ли заполнять анкету или созваниваться?<i></i></summary><div class="ans"><p>Нет. Я работаю по вашему описанию бизнеса и видению бренда, а вопросы по ходу работы решаем в переписке. Если захотите обсудить что-то голосом — тоже можно.</p></div></details>
       <details><summary>А если логотип не понравится?<i></i></summary><div class="ans"><p>До разработки мы утверждаем платформу бренда и мудборд, поэтому логотип опирается на уже согласованное направление. Доработки входят в два круга правок на этапе.</p></div></details>
       <details><summary>Почему в знаке не будет дома, если вы строите дома?<i></i></summary><div class="ans"><p>Основной спрос — контейнеры: их покупают и арендуют каждый день. Дом в знаке превратит вас в домостроительную компанию и отпугнёт основной поток клиентов. Дома мы покажем на сайте и в рекламе.</p></div></details>
       <details><summary>Логотип можно будет нанести краской на контейнер?<i></i></summary><div class="ans"><p>Да, это главное требование. Знак работает в одну краску, без градиентов и тонких линий. Вы получите трафарет в натуральную величину и номера краски по RAL.</p></div></details>
@@ -591,9 +577,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="cta" data-r>
       <div class="grid-bg"></div>
       <span class="label" style="color:rgba(255,255,255,.75)">Следующий шаг</span>
-      <h2 style="margin-top:20px">Начнём с брифа? <span>Это 40 минут вашего времени.</span></h2>
+      <h2 style="margin-top:20px">Готовы начать? <span>Всё нужное для старта у меня уже есть.</span></h2>
       <div class="cta-row">
-        <p>Напишите, какой формат вам ближе, — в течение дня пришлю ссылку на бриф, договор и счёт. Старт в течение недели после предоплаты. Предложение действует до 7 ноября 2026 года. Отвечаю в будни с 08:00 до 19:00.</p>
+        <p>Напишите, какой формат вам ближе, — в течение дня пришлю ТЗ на согласование, договор и счёт. Старт в течение недели после предоплаты. Предложение действует до 7 ноября 2026 года. Отвечаю в будни с 08:00 до 19:00.</p>
         <div class="cta-btns">
           <a class="btn white" href="https://t.me/devenas" target="_blank" rel="noopener">Telegram <span class="arr">→</span></a>
           <a class="btn ghost" href="https://vk.com/devenas.design" target="_blank" rel="noopener">ВКонтакте <span class="arr">→</span></a>
